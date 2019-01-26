@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 8533608972783356110}
   - component: {fileID: 8533608972783356108}
   - component: {fileID: 8533608972783356109}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Grandma
   m_TagString: Light
   m_Icon: {fileID: 0}
