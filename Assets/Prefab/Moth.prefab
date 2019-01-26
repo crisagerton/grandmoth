@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 3720175330524578068}
   - component: {fileID: 3720175330524578070}
   - component: {fileID: 3720175330524578065}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Moth
   m_TagString: Moth
   m_Icon: {fileID: 0}

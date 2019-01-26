@@ -33,6 +33,10 @@ public class Switch : Interactable
 
     public override void lightTriggerEffect()
     {
-        return;
+        active = true;
+
+        sr.color = Color.red;
+
+        bulb.activateBulb();
     }
 }
