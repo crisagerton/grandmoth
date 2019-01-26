@@ -4,9 +4,11 @@ using UnityEngine;
 
 public class MothController : MonoBehaviour
 {
+    public Collider2D grandma; //to ignore collisions between players
     public float speed;
     public float sleepySpeed; //the speed the moth falls asleep
 
+    private Animator anim;
     private Rigidbody2D rb2d;
     private Vector2 velocity;
     private float currentSpeed;
@@ -15,13 +17,18 @@ public class MothController : MonoBehaviour
 
     void Start()
     {
+        anim = GetComponent<Animator>();
         rb2d = GetComponent<Rigidbody2D>();
         velocity = new Vector2(0, 0);
         currentSpeed = speed;
+
+        if (grandma)
+            Physics2D.IgnoreCollision(grandma, GetComponent<Collider2D>());
     }
 
     void FixedUpdate()
     {
+        anim.SetBool("sleeping", sleepyTime);
         ///Adjusting current speed based on if it's outside a light source ("Glow")
         if (sleepyTime)
         {
@@ -31,9 +38,8 @@ public class MothController : MonoBehaviour
         else
             currentSpeed = speed;
 
-        Debug.Log(currentSpeed);
-
         rb2d.MovePosition(rb2d.position + new Vector2(Input.GetAxis("Horizontal1"), Input.GetAxis("Vertical1")) * Time.fixedDeltaTime * currentSpeed);
+        //Debug.Log(transform.localScale.x);
     }
 
     void OnTriggerExit2D(Collider2D other)
