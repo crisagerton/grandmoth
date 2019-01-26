@@ -6,6 +6,9 @@ using UnityEngine.EventSystems;
 public class SelectOnInput : MonoBehaviour {
     public GameObject selectedObject;
 
+    public bool horizontalControlled = false;
+    public bool verticalControlled = false;
+
     private EventSystem eventSystem;
     private bool buttonSelected;
 
@@ -15,12 +18,24 @@ public class SelectOnInput : MonoBehaviour {
     }
     
     private void Update() {
-		if (Input.GetAxisRaw("Vertical") != 0 && !buttonSelected)
+		if (directionCheck() && !buttonSelected)
         {
             eventSystem.SetSelectedGameObject(selectedObject);
             buttonSelected = true;
         }
 	}
+
+    private bool directionCheck()
+    {
+        if (horizontalControlled && verticalControlled)
+            return Input.GetAxisRaw("Horizontal") != 0 || Input.GetAxisRaw("Vertical") != 0;
+        else if (horizontalControlled)
+            return Input.GetAxisRaw("Horizontal") != 0;
+        else if (verticalControlled)
+            return Input.GetAxisRaw("Vertical") != 0;
+
+        return false;
+    }
 
     private void OnDisable()
     {
