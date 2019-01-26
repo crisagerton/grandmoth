@@ -14,14 +14,14 @@ public abstract class Interactable : MonoBehaviour
     private bool mothColliding = false;
     private bool lightColliding = false;
     
-    void Awake()
+    public virtual void Awake()
     {
         active = false;
         mothColliding = false;
         lightColliding = false;
     }
 
-    public void Update()
+    public virtual void Update()
     {
         // TEMP INPUT KEY
         if (mothCollidingCheck() && Input.GetKeyDown(KeyCode.A))

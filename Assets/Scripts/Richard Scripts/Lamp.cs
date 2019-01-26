@@ -2,14 +2,8 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Torch : Interactable
+public class Lamp : Interactable
 {
-    [Header("Torch Values")]
-    [Range(0f, 5f)]
-    public float setLightTimer = 2;
-
-    private float lightTimer;
-
     // TEMPORARY
     private SpriteRenderer sr;
 
@@ -23,18 +17,6 @@ public class Torch : Interactable
     public override void Update()
     {
         base.Update();
-
-        if (active)
-        {
-            lightTimer -= Time.deltaTime;
-
-            if (lightTimer <= 0f)
-            {
-                sr.color = Color.white;
-
-                active = false;
-            }
-        }
     }
 
     public override void mothTriggerEffect()
@@ -47,7 +29,5 @@ public class Torch : Interactable
         active = true;
 
         sr.color = Color.red;
-
-        lightTimer = setLightTimer;
     }
 }
