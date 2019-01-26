@@ -7,7 +7,7 @@ public class Torch : Interactable
     [Header("Torch Values")]
     [Range(0f, 5f)]
     public float setLightTimer = 2;
-    public GameObject glow;
+    public GlowAnimation glow;
 
     private float lightTimer;
 
@@ -17,8 +17,6 @@ public class Torch : Interactable
     public override void Awake()
     {
         base.Awake();
-
-        glow.SetActive(false);
 
         sr = GetComponent<SpriteRenderer>();
     }
@@ -33,7 +31,7 @@ public class Torch : Interactable
 
             if (lightTimer <= 0f)
             {
-                glow.SetActive(false);
+                glow.disableGlow();
 
                 sr.color = Color.white;
 
@@ -51,7 +49,8 @@ public class Torch : Interactable
     {
         active = true;
 
-        glow.SetActive(true);
+        if (!glow.isActive())
+            glow.startGlow();
 
         sr.color = Color.red;
 

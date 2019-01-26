@@ -33,8 +33,7 @@ public class MothController : MonoBehaviour
 
         Debug.Log(currentSpeed);
 
-        rb2d.MovePosition(rb2d.position +
-            new Vector2(Input.GetAxis("Horizontal1"), Input.GetAxis("Vertical1")) * Time.fixedDeltaTime * currentSpeed);
+        rb2d.MovePosition(rb2d.position + new Vector2(Input.GetAxis("Horizontal1"), Input.GetAxis("Vertical1")) * Time.fixedDeltaTime * currentSpeed);
     }
 
     void OnTriggerExit2D(Collider2D other)

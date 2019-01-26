@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 3799064989499302204}
   - component: {fileID: 2321618789604618438}
   - component: {fileID: 7629394473516982936}
+  - component: {fileID: 8214597509770138695}
   m_Layer: 0
   m_Name: Glow
   m_TagString: Glow
@@ -95,6 +96,19 @@ CircleCollider2D:
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
   m_Radius: 0.5
+--- !u!114 &8214597509770138695
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1778403632856116368}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2770a48846299ae43995a7321c29883d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  duration: 3
 --- !u!1 &3848902353038280860
 GameObject:
   m_ObjectHideFlags: 0
@@ -342,4 +356,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bb98605292609f84bac0065f8713b37e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  glow: {fileID: 1778403632856116368}
+  glow: {fileID: 8214597509770138695}

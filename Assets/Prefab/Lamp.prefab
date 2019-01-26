@@ -112,7 +112,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   mothInteractable: 0
   lightInteractable: 1
-  glow: {fileID: 5238012028010587310}
+  glow: {fileID: 3539471488822455961}
 --- !u!1 &5238012028010587310
 GameObject:
   m_ObjectHideFlags: 0
@@ -124,6 +124,7 @@ GameObject:
   - component: {fileID: 8971474775517057353}
   - component: {fileID: 4837958316990927786}
   - component: {fileID: 2213252052945964930}
+  - component: {fileID: 3539471488822455961}
   m_Layer: 0
   m_Name: Glow
   m_TagString: Glow
@@ -208,3 +209,16 @@ CircleCollider2D:
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
   m_Radius: 0.5
+--- !u!114 &3539471488822455961
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5238012028010587310}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2770a48846299ae43995a7321c29883d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  duration: 3

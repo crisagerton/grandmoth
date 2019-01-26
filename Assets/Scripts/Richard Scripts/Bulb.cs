@@ -4,16 +4,11 @@ using UnityEngine;
 
 public class Bulb : MonoBehaviour
 {
-    public GameObject glow;
-
-    public void Awake()
-    {
-        glow.SetActive(false);
-    }
+    public GlowAnimation glow;
 
     public void activateBulb()
     {
-        glow.SetActive(true);
+        glow.startGlow();
 
         GetComponent<SpriteRenderer>().color = Color.red;
     }
