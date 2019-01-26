@@ -6,8 +6,8 @@ public class PlayerController : MonoBehaviour
 {
     public float speed;
 
-    private Rigidbody2D rb2d;
-    private Vector2 velocity;
+    protected Rigidbody2D rb2d;
+    protected Vector2 velocity;
 
     void Start()
     {
