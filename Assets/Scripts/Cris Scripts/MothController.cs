@@ -22,6 +22,7 @@ public class MothController : MonoBehaviour
         rb2d = GetComponent<Rigidbody2D>();
         velocity = new Vector2(0, 0);
         currentSpeed = speed;
+        sleepyTime = true;
 
         if (grandma)
             Physics2D.IgnoreCollision(grandma, GetComponent<Collider2D>());
@@ -58,12 +59,17 @@ public class MothController : MonoBehaviour
 
     void OnTriggerEnter2D(Collider2D other)
     {
+        //RaycastHit2D hit = Physics2D.Raycast(transform.position, other.transform.position - transform.position,
+        //    Vector3.Distance(other.transform.position, transform.position));
+        //Debug.Log(hit.transform.tag);
         if (other.tag.Contains("Glow"))
             sleepyTime = false;
     }
 
     void OnTriggerStay2D(Collider2D other)
     {
+        //RaycastHit2D hit = Physics2D.Raycast(transform.position, other.transform.position);
+        //Debug.Log(hit);
         if (other.tag.Contains("Glow"))
             sleepyTime = false;
     }

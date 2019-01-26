@@ -2,8 +2,9 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public abstract class Interactable : MonoBehaviour
+public class CollisionInteraction : MonoBehaviour
 {
+    //Basically replicates the Interactable class, but with colliders 
     [Header("Characters Interactable With")]
     public bool mothInteractable = false;
     public bool lightInteractable = false;
@@ -15,7 +16,7 @@ public abstract class Interactable : MonoBehaviour
     private bool lightColliding = false;
 
     private Animator anim;
-    
+
     public virtual void Awake()
     {
         active = false;
@@ -27,19 +28,22 @@ public abstract class Interactable : MonoBehaviour
     public virtual void Update()
     {
         // TEMP INPUT KEY
-        if (mothCollidingCheck() && Input.GetAxisRaw("MothInteract") != 0)
+        if (mothCollidingCheck()) //&& Input.GetAxisRaw("MothInteract") != 0)
             mothTriggerEffect();
 
-        if (lightCollidingCheck() && Input.GetAxisRaw("LightInteract") != 0)
+        if (lightCollidingCheck()) //&& Input.GetAxisRaw("LightInteract") != 0)
             lightTriggerEffect();
 
         if (active && anim)
         {
             anim.SetBool("activated", true);
         }
+        //if (active && GetComponent<Rigidbody2D>()){
+        //    GetComponent<Rigidbody2D>().active = false;
+        //}
     }
 
-    public void OnTriggerStay2D(Collider2D collision)
+    public void OnCollisionStay2D(Collision2D collision)
     {
         if (mothTriggerCheck(collision))
             mothColliding = true;
@@ -48,19 +52,16 @@ public abstract class Interactable : MonoBehaviour
             lightColliding = true;
     }
 
-    public void OnTriggerExit2D(Collider2D collision)
+    // Overridable methods for the trigger effects;
+    public virtual void mothTriggerEffect()
     {
-        if (collision.tag == "Moth")
-            mothColliding = false;
-
-        if (collision.tag == "Light")
-            lightColliding = false;
+        active = true;
     }
 
-    // Abstract methods for the trigger effects;
-    public abstract void mothTriggerEffect();
-
-    public abstract void lightTriggerEffect();
+    public virtual void lightTriggerEffect()
+    {
+        active = true;
+    }
 
     #region Colliding Condition Check
     private bool mothCollidingCheck()
@@ -75,14 +76,14 @@ public abstract class Interactable : MonoBehaviour
     #endregion Colliding Condition Check
 
     #region Trigger Condition Checks
-    protected bool mothTriggerCheck(Collider2D collision)
+    private bool mothTriggerCheck(Collision2D collision)
     {
-        return (mothInteractable && !active && collision.tag == "Moth");
+        return (mothInteractable && !active && collision.transform.tag == "Moth");
     }
 
-    protected bool lightTriggerCheck(Collider2D collision)
+    private bool lightTriggerCheck(Collision2D collision)
     {
-        return (lightInteractable && !active && collision.tag == "Light");
+        return (lightInteractable && !active && collision.transform.tag == "Light");
     }
     #endregion Trigger Condition Checks
 }
