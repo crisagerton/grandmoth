@@ -50,4 +50,10 @@ public class MothController : MonoBehaviour
         if (other.tag.Contains("Glow"))
             sleepyTime = false;
     }
+
+    void OnTriggerStay2D(Collider2D other)
+    {
+        if (other.tag.Contains("Glow"))
+            sleepyTime = false;
+    }
 }
