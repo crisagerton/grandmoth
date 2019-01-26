@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 2636187527065314685}
   - component: {fileID: 2022549179026960277}
   - component: {fileID: 2612551469710204032}
+  - component: {fileID: 1267756064378807271}
   m_Layer: 0
   m_Name: Glow
   m_TagString: Glow
@@ -95,6 +96,19 @@ CircleCollider2D:
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
   m_Radius: 0.5
+--- !u!114 &1267756064378807271
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4184923475508997176}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2770a48846299ae43995a7321c29883d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  duration: 3
 --- !u!1 &4772113921896394247
 GameObject:
   m_ObjectHideFlags: 0
@@ -207,7 +221,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   mothInteractable: 0
   lightInteractable: 1
-  glow: {fileID: 4184923475508997176}
+  glow: {fileID: 1267756064378807271}
 --- !u!1 &4772113922239695786
 GameObject:
   m_ObjectHideFlags: 0
@@ -217,7 +231,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4772113922239695784}
-  - component: {fileID: 4772113922239695787}
+  - component: {fileID: 4631740705220208348}
   m_Layer: 0
   m_Name: Candle
   m_TagString: Untagged
@@ -241,25 +255,20 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!95 &4772113922239695787
-Animator:
-  serializedVersion: 3
+--- !u!114 &4631740705220208348
+MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4772113922239695786}
   m_Enabled: 1
-  m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: 8f1bfa0222c0c5641b3af09cfcac5d28, type: 2}
-  m_CullingMode: 0
-  m_UpdateMode: 0
-  m_ApplyRootMotion: 0
-  m_LinearVelocityBlending: 0
-  m_WarningMessage: 
-  m_HasTransformHierarchy: 1
-  m_AllowConstantClipSamplingOptimization: 1
-  m_KeepAnimatorControllerStateOnDisable: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4c0ffff75a9b5d640b0d6db80bb29430, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  distanceMoved: 3
+  moveDuration: 3
 --- !u!1 &4772113922596909309
 GameObject:
   m_ObjectHideFlags: 0

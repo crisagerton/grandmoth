@@ -4,22 +4,22 @@ using UnityEngine;
 
 public class Aura : MonoBehaviour
 {
-    public GameObject glow;
-
-    public void Awake()
-    {
-        glow.SetActive(false);
-    }
+    public GlowAnimation glow;
 
     public void OnTriggerStay2D(Collider2D collision)
     {
-        if (collision.tag == "Glow")
-            glow.SetActive(true);
+        print(collision.gameObject.name);
+
+        if (collision.tag == "Glow" && collision.gameObject != glow.gameObject)
+        {
+            if (!glow.isActive() && !glow.isMaxLight())
+                glow.startGlow();
+        }
     }
 
     public void OnTriggerExit2D(Collider2D collision)
     {
-        if (collision.tag == "Glow")
-            glow.SetActive(false);
+        if (collision.tag == "Glow" && collision.gameObject != glow.gameObject)
+            glow.disableGlow(); 
     }
 }

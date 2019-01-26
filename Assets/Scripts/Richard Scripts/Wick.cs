@@ -5,22 +5,20 @@ using UnityEngine;
 public class Wick : Interactable
 {
     [Header("Wick Values")]
-    public GameObject glow;
+    public GlowAnimation glow;
 
     // TEMPORARY
     private SpriteRenderer sr;
 
-    private Animator animator;
+    private CandleAnimation candleAni;
 
     public override void Awake()
     {
         base.Awake();
 
-        glow.SetActive(false);
-
         sr = GetComponent<SpriteRenderer>();
 
-        animator = transform.parent.GetComponent<Animator>();
+        candleAni = transform.parent.GetComponent<CandleAnimation>();
     }
 
     public override void Update()
@@ -37,10 +35,10 @@ public class Wick : Interactable
     {
         active = true;
 
-        glow.SetActive(true);
+        glow.startGlow();
 
         sr.color = Color.red;
 
-        animator.SetTrigger("shrink");
+        candleAni.startMovement();
     }
 }
