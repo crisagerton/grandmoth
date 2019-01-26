@@ -127,7 +127,7 @@ PrefabInstance:
     - target: {fileID: 3950941777238732427, guid: 656d19030a1f137409a0a5916ce8b057,
         type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 935920060758237276, guid: 656d19030a1f137409a0a5916ce8b057,
         type: 3}
@@ -283,7 +283,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!61 &367307415
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -710,7 +710,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!61 &2030963830
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -832,6 +832,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Crate
       objectReference: {fileID: 0}
+    - target: {fileID: 6533378603017151250, guid: 5f4b14c4ded4b864d8074fe6ad56ace8,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 6533378603017151254, guid: 5f4b14c4ded4b864d8074fe6ad56ace8,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -885,6 +890,16 @@ PrefabInstance:
     - target: {fileID: 6533378603017151254, guid: 5f4b14c4ded4b864d8074fe6ad56ace8,
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6706903816213457533, guid: 5f4b14c4ded4b864d8074fe6ad56ace8,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5060378322519767012, guid: 5f4b14c4ded4b864d8074fe6ad56ace8,
+        type: 3}
+      propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []

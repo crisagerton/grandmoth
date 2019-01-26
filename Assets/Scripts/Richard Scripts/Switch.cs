@@ -6,27 +6,37 @@ public class Switch : Interactable
 {
     [Header("Switch Values")]
     public Bulb bulb;
-
-    // TEMPORARY
-    private SpriteRenderer sr;
-
+    
     public override void Awake()
     {
         base.Awake();
-
-        sr = GetComponent<SpriteRenderer>();
     }
 
     public override void Update()
     {
-        base.Update();
+        
+    }
+
+    public void OnTriggerEnter2D(Collider2D collision)
+    {
+        if (mothTriggerCheck(collision))
+        {
+            mothTriggerEffect();
+
+            gameObject.SetActive(false);
+        }
+
+        if (lightTriggerCheck(collision))
+        {
+            lightTriggerEffect();
+
+            gameObject.SetActive(false);
+        }
     }
 
     public override void mothTriggerEffect()
     {
         active = true;
-
-        sr.color = Color.red;
 
         bulb.activateBulb();
     }
@@ -34,8 +44,6 @@ public class Switch : Interactable
     public override void lightTriggerEffect()
     {
         active = true;
-
-        sr.color = Color.red;
 
         bulb.activateBulb();
     }

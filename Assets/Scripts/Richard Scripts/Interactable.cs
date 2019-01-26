@@ -67,12 +67,12 @@ public abstract class Interactable : MonoBehaviour
     #endregion Colliding Condition Check
 
     #region Trigger Condition Checks
-    private bool mothTriggerCheck(Collider2D collision)
+    protected bool mothTriggerCheck(Collider2D collision)
     {
         return (mothInteractable && !active && collision.tag == "Moth");
     }
 
-    private bool lightTriggerCheck(Collider2D collision)
+    protected bool lightTriggerCheck(Collider2D collision)
     {
         return (lightInteractable && !active && collision.tag == "Light");
     }
