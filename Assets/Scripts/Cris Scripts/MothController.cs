@@ -38,7 +38,7 @@ public class MothController : MonoBehaviour
         else
             currentSpeed = speed;
 
-        rb2d.MovePosition(rb2d.position + new Vector2(Input.GetAxis("Horizontal1"), Input.GetAxis("Vertical1")) * Time.fixedDeltaTime * currentSpeed);
+        rb2d.MovePosition(rb2d.position + new Vector2(Input.GetAxis("DPadHorizontal2"), Input.GetAxis("DPadVertical2")) * Time.fixedDeltaTime * currentSpeed);
         //Debug.Log(transform.localScale.x);
     }
 
