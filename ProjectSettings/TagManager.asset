@@ -20,7 +20,7 @@ TagManager:
   - 
   - 
   - 
-  - 
+  - LightBlocker
   - 
   - 
   - 
@@ -41,9 +41,21 @@ TagManager:
   - 
   - 
   m_SortingLayers:
-  - name: Default
-    uniqueID: 0
+  - name: Bottom
+    uniqueID: 3480955673
+    locked: 0
+  - name: Background
+    uniqueID: 4138305467
     locked: 0
   - name: Drawn
     uniqueID: 3673650515
+    locked: 0
+  - name: Default
+    uniqueID: 0
+    locked: 0
+  - name: LightBlocker
+    uniqueID: 1719634637
+    locked: 0
+  - name: Occlusion
+    uniqueID: 3476987213
     locked: 0
