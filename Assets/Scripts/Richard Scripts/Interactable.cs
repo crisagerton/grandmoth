@@ -24,10 +24,10 @@ public abstract class Interactable : MonoBehaviour
     public virtual void Update()
     {
         // TEMP INPUT KEY
-        if (mothCollidingCheck() && Input.GetKeyDown(KeyCode.A))
+        if (mothCollidingCheck() && Input.GetKeyDown(KeyCode.Alpha1))
             mothTriggerEffect();
 
-        if (lightCollidingCheck() && Input.GetKeyDown(KeyCode.D))
+        if (lightCollidingCheck() && Input.GetKeyDown(KeyCode.Alpha2))
             lightTriggerEffect();
     }
 

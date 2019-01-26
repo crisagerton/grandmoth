@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 2283437748999687485}
   - component: {fileID: 1459563371080211060}
   - component: {fileID: 4067027917057998721}
+  - component: {fileID: 556348783665520740}
   m_Layer: 0
   m_Name: Lamp
   m_TagString: Untagged
@@ -97,6 +98,21 @@ CircleCollider2D:
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
   m_Radius: 0.5
+--- !u!114 &556348783665520740
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 556348783665520739}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: eb434d9d27e87ef43a3e6b14e3674f32, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  mothInteractable: 0
+  lightInteractable: 1
+  glow: {fileID: 5238012028010587310}
 --- !u!1 &5238012028010587310
 GameObject:
   m_ObjectHideFlags: 0
@@ -109,8 +125,8 @@ GameObject:
   - component: {fileID: 4837958316990927786}
   - component: {fileID: 2213252052945964930}
   m_Layer: 0
-  m_Name: Light
-  m_TagString: Light
+  m_Name: Glow
+  m_TagString: Glow
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

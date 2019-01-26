@@ -4,6 +4,9 @@ using UnityEngine;
 
 public class Wick : Interactable
 {
+    [Header("Wick Values")]
+    public GameObject glow;
+
     // TEMPORARY
     private SpriteRenderer sr;
 
@@ -12,6 +15,8 @@ public class Wick : Interactable
     public override void Awake()
     {
         base.Awake();
+
+        glow.SetActive(false);
 
         sr = GetComponent<SpriteRenderer>();
 
@@ -31,6 +36,8 @@ public class Wick : Interactable
     public override void lightTriggerEffect()
     {
         active = true;
+
+        glow.SetActive(true);
 
         sr.color = Color.red;
 

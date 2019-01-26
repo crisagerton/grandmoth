@@ -4,12 +4,17 @@ using UnityEngine;
 
 public class Lamp : Interactable
 {
+    [Header("Lamp Values")]
+    public GameObject glow;
+
     // TEMPORARY
     private SpriteRenderer sr;
 
     public override void Awake()
     {
         base.Awake();
+
+        glow.SetActive(false);
 
         sr = GetComponent<SpriteRenderer>();
     }
@@ -27,6 +32,8 @@ public class Lamp : Interactable
     public override void lightTriggerEffect()
     {
         active = true;
+
+        glow.SetActive(true);
 
         sr.color = Color.red;
     }

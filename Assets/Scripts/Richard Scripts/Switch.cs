@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class Switch : Interactable
 {
+    [Header("Switch Values")]
     public Bulb bulb;
 
     // TEMPORARY
