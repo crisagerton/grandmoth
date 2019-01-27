@@ -2,12 +2,22 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using Cinemachine;
+
 
 public class EndGoal : MonoBehaviour
 {
     private Fader fade;
     private List<GameObject> players = new List<GameObject>();
+    public CinemachineVirtualCamera cm;
 
+    public float duration = 3f;
+
+    private float startTime;
+    private float maxOthSize = 5.35f;
+    private float startOthSize = 3f;
+
+    private bool activeTimer = false;
     private bool active = false;
     
     void Awake()
@@ -15,6 +25,7 @@ public class EndGoal : MonoBehaviour
         fade = GameObject.Find("GameManager").GetComponent<Fader>();
 
         active = false;
+        activeTimer = false;
     }
 
     // Update is called once per frame
@@ -23,7 +34,18 @@ public class EndGoal : MonoBehaviour
         if (players.Count == 2 && !active)
         {
             active = true;
-            LoadNextLevel();
+            //LoadNextLevel();
+            PlayCutscene();
+        }
+
+        if (activeTimer)
+        {
+            float t = (Time.unscaledTime - startTime) / duration;
+
+            if (t > 1)
+                activeTimer = false;
+            else
+                cm.m_Lens.OrthographicSize = Mathf.SmoothStep(startOthSize, maxOthSize, t);
         }
     }
 
@@ -55,5 +77,33 @@ public class EndGoal : MonoBehaviour
         Time.timeScale = 1;
 
         SceneManager.LoadScene(sceneIndex + 1);
+    }
+
+    public void PlayCutscene()
+    {
+        StartCoroutine(CutSceneAnimation());
+    }
+
+    IEnumerator CutSceneAnimation()
+    {
+        float fadeTime = fade.SlowDownFade(1);
+
+        yield return new WaitForSecondsRealtime(fadeTime);
+
+        fadeTime = fade.SlowDownFade(-1);
+
+        yield return new WaitForSecondsRealtime(fadeTime - 0.5f);
+
+        cm.Follow = null;
+        cm.LookAt = null;
+
+        startTime = Time.unscaledTime;
+        activeTimer = true;
+
+        while (activeTimer)
+        {
+            break;
+        }
+
     }
 }

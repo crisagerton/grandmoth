@@ -35,8 +35,11 @@ public class SideDoorAnimation : MonoBehaviour
             if (t > 1)
             {
                 currentState = Interactable.States.Rest;
-                sdTrigger.enabled = false;
-                enabled = false;
+                if (sdTrigger != null)
+                {
+                    sdTrigger.enabled = false;
+                    enabled = false;
+                }
             }
             else
                 transform.position = new Vector3(Mathf.SmoothStep(currentXPosition, newXPosition, t), transform.position.y, 0);

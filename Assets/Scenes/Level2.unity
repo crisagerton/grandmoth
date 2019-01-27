@@ -401,7 +401,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &225791915
 Transform:
   m_ObjectHideFlags: 0
@@ -1129,6 +1129,16 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 8965276424055559097, guid: cd9873567db39334787130a42ff815a9,
+        type: 3}
+      propertyPath: cm
+      value: 
+      objectReference: {fileID: 1247490669}
+    - target: {fileID: 8965276424055559097, guid: cd9873567db39334787130a42ff815a9,
+        type: 3}
+      propertyPath: timer
+      value: 3
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: cd9873567db39334787130a42ff815a9, type: 3}
 --- !u!1001 &980074805
@@ -1374,6 +1384,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   fadeOutTexture: {fileID: 2800000, guid: 11ae45d253ce60242ab0283dde28603d, type: 3}
   sceneFadeSpeed: 0.8
+  sceneSlowFadeSpeed: 1.5
   audioFadeSpeed: 0.5
 --- !u!114 &1088986052
 MonoBehaviour:

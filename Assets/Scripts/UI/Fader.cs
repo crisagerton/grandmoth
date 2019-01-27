@@ -4,21 +4,30 @@ using UnityEngine;
 
 public class Fader : MonoBehaviour {
     public Texture2D fadeOutTexture;
+
     public float sceneFadeSpeed;
+    public float sceneSlowFadeSpeed;
 
     private int drawDepth = -1000;
     private float alpha = 1.0f;
     private int fadeDirection = -1;
 
+    private float currentFadeSpeed;
+
     public float audioFadeSpeed;
     private int audioFadeDirection = -1;
     private float volume = 1.0f;
 
+    private void Awake()
+    {
+        currentFadeSpeed = sceneFadeSpeed;
+    }
+
     private void OnGUI()
     {
-        alpha += fadeDirection * sceneFadeSpeed * Time.unscaledDeltaTime;
+        alpha += fadeDirection * currentFadeSpeed * Time.unscaledDeltaTime;
         alpha = Mathf.Clamp01(alpha);
-
+        
         volume -= audioFadeDirection * audioFadeSpeed * Time.unscaledDeltaTime;
         volume = Mathf.Clamp01(volume);
 
@@ -31,8 +40,23 @@ public class Fader : MonoBehaviour {
 
     public float BeginSceneFade(int direction)
     {
+        currentFadeSpeed = sceneFadeSpeed;
         fadeDirection = direction;
-        return (sceneFadeSpeed);
+        return (currentFadeSpeed);
+    }
+
+    public float SlowDownFade(int direction)
+    {
+        currentFadeSpeed = sceneSlowFadeSpeed;
+        fadeDirection = direction;
+        return (currentFadeSpeed);
+    }
+
+    public float InstantFade(int direction)
+    {
+        currentFadeSpeed = 0;
+        audioFadeDirection = direction;
+        return (currentFadeSpeed);
     }
 
     public void BeginAudioFade(int direction)
