@@ -11,6 +11,7 @@ public class DoorAnimation : MonoBehaviour
     private float startYPosition;
     private float currentYPosition;
     private float newYPosition;
+
     public DoorTrigger dTrigger;
 
     public SimDoorTrigger[] simDTriggers;

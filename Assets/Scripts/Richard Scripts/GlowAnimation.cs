@@ -54,6 +54,8 @@ public class GlowAnimation : MonoBehaviour
             {
                 activeShrink = false;
                 maxLight = false;
+
+                transform.localScale = Vector3.zero;
             }
             else
             {

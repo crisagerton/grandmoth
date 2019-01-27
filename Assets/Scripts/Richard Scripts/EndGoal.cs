@@ -9,6 +9,7 @@ public class EndGoal : MonoBehaviour
 {
     public CinemachineVirtualCamera cm;
     public GameObject levelObjects;
+    public List<SpriteRenderer> sprites;
 
     public float duration = 3f;
 
@@ -101,6 +102,9 @@ public class EndGoal : MonoBehaviour
         levelObjects.SetActive(false);
         particles.Stop();
         particles.Clear();
+
+        foreach (SpriteRenderer sprite in sprites)
+            sprite.enabled = false;
 
         yield return new WaitForSecondsRealtime(fadeTime - 0.8f);
 

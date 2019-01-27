@@ -5,10 +5,36 @@ using UnityEngine;
 public class TorchTrigger : Interactable
 {
     public DummyTorch dummyTorch;
+
+    public GameObject glow;
+
+    public SpriteRenderer sprite;
+
+    private ParticleSystem particles;
     
     public override void Awake()
     {
         base.Awake();
+
+        particles = GetComponent<ParticleSystem>();
+    }
+
+    public void Update()
+    {
+        if (glow.transform.localScale == Vector3.zero)
+        {
+            sprite.enabled = true;
+
+            if (!particles.isPlaying)
+                particles.Play();
+        }
+        else
+        {
+            sprite.enabled = false;
+
+            if (particles.isPlaying)
+                particles.Stop();
+        }
     }
 
     public override void mothTriggerEffect()

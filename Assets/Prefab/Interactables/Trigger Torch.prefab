@@ -155,6 +155,8 @@ MonoBehaviour:
   mothInteractable: 0
   lightInteractable: 1
   dummyTorch: {fileID: 690473243447857295}
+  glow: {fileID: 4041029004657727506}
+  sprite: {fileID: 514516403}
 --- !u!198 &4032629032525702609
 ParticleSystem:
   m_ObjectHideFlags: 0
