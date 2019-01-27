@@ -40,9 +40,14 @@ public class MothController : MonoBehaviour
             if (currentSpeed > 0.001)
                 currentSpeed -= Time.fixedDeltaTime / sleepySpeed;
             rb2d.gravityScale += Time.fixedDeltaTime / sleepySpeed;
+            if (!GetComponent<ParticleSystem>().isPlaying)
+            {
+                GetComponent<ParticleSystem>().Play();
+            }
         }
         else
         {
+            GetComponent<ParticleSystem>().Stop();
             currentSpeed = speed;
             rb2d.gravityScale = 0;
         }
