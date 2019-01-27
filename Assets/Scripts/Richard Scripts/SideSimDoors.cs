@@ -2,13 +2,13 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class SimDoors : MonoBehaviour
+public class SideSimDoors : MonoBehaviour
 {
     public SimDoorTrigger trigger1;
     public SimDoorTrigger trigger2;
 
-    public DoorAnimation door1;
-    public DoorAnimation door2;
+    public SideDoorAnimation door1;
+    public SideDoorAnimation door2;
 
     private bool active = false;
 

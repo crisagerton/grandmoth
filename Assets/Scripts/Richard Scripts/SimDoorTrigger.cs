@@ -4,9 +4,6 @@ using UnityEngine;
 
 public class SimDoorTrigger : Interactable
 {
-    [Header("Door Trigger Values")]
-    public DoorAnimation doorAni;
-
     // TEMPORARY
     private SpriteRenderer sr;
 
@@ -23,8 +20,6 @@ public class SimDoorTrigger : Interactable
         currentState = States.Active;
 
         sr.color = Color.red;
-
-        doorAni.startMovement(currentState);
     }
 
     public override void lightTriggerEffect()
@@ -32,8 +27,6 @@ public class SimDoorTrigger : Interactable
         currentState = States.Active;
 
         sr.color = Color.red;
-
-        doorAni.startMovement(currentState);
     }
 
     public override void mothLeaveEffect()
@@ -41,8 +34,6 @@ public class SimDoorTrigger : Interactable
         currentState = States.Rest;
 
         sr.color = Color.white;
-
-        doorAni.startMovement(currentState);
     }
 
     public override void lightLeaveEffect()
@@ -50,8 +41,6 @@ public class SimDoorTrigger : Interactable
         currentState = States.Rest;
 
         sr.color = Color.white;
-
-        doorAni.startMovement(currentState);
     }
 
     public Interactable.States getTriggerState()
