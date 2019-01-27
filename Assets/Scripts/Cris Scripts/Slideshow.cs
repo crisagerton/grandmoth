@@ -5,7 +5,11 @@ using UnityEngine;
 public class Slideshow : MonoBehaviour
 {
     ///Made specifically for the final cutscene
+    [Header("Moth Stuff")]
+    public GameObject moth;
+    public Vector3 startPosition;
 
+    [Header("Fading Stuff")]
     public SpriteRenderer sceneImage;
     public SpriteRenderer transImage;
     public List<Sprite> backgrounds;
@@ -22,6 +26,8 @@ public class Slideshow : MonoBehaviour
 
     void Start()
     {
+        moth.transform.position = startPosition;
+
         sceneImage.sprite = backgrounds[0];
         transImage.sprite = backgrounds[1];
 
