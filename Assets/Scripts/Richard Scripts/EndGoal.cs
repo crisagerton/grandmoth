@@ -54,6 +54,6 @@ public class EndGoal : MonoBehaviour
 
         Time.timeScale = 1;
 
-        SceneManager.LoadScene(sceneIndex);
+        SceneManager.LoadScene(sceneIndex+1);
     }
 }

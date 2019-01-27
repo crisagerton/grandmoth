@@ -240,7 +240,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   fadeOutTexture: {fileID: 2800000, guid: 4c62506030d4f244382d07251c0815d7, type: 3}
-  sceneFadeSpeed: 0.3
+  sceneFadeSpeed: 2
   audioFadeSpeed: 0.5
 --- !u!114 &18784266
 MonoBehaviour:
@@ -768,12 +768,12 @@ PrefabInstance:
     - target: {fileID: 3720175330524578069, guid: ef7e275c34dd4ec4ba68be1c3a128b4b,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: -6.13
+      value: -7.65
       objectReference: {fileID: 0}
     - target: {fileID: 3720175330524578069, guid: ef7e275c34dd4ec4ba68be1c3a128b4b,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0.02
+      value: -0.1
       objectReference: {fileID: 0}
     - target: {fileID: 3720175330524578069, guid: ef7e275c34dd4ec4ba68be1c3a128b4b,
         type: 3}
@@ -831,6 +831,16 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 21300000, guid: 160d723d4daa7b44a9ee00a23f4d91bb,
         type: 3}
+    - target: {fileID: 3720175330524578058, guid: ef7e275c34dd4ec4ba68be1c3a128b4b,
+        type: 3}
+      propertyPath: m_SortingLayerID
+      value: -817980083
+      objectReference: {fileID: 0}
+    - target: {fileID: 3720175330524578058, guid: ef7e275c34dd4ec4ba68be1c3a128b4b,
+        type: 3}
+      propertyPath: m_SortingLayer
+      value: 2
+      objectReference: {fileID: 0}
     - target: {fileID: 3720175330524578070, guid: ef7e275c34dd4ec4ba68be1c3a128b4b,
         type: 3}
       propertyPath: grandma
@@ -844,7 +854,7 @@ PrefabInstance:
     - target: {fileID: 6160936627649504683, guid: ef7e275c34dd4ec4ba68be1c3a128b4b,
         type: 3}
       propertyPath: m_Color.a
-      value: 0.3647059
+      value: 0.3764706
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: ef7e275c34dd4ec4ba68be1c3a128b4b, type: 3}
@@ -965,7 +975,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1000171524}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.27, y: 1.3499999, z: 0}
+  m_LocalPosition: {x: -0.51, y: 1.29, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 1895261252}
@@ -1042,12 +1052,12 @@ PrefabInstance:
     - target: {fileID: 8533608972783356104, guid: 3c28749c6693edc499c3c578c7eb415c,
         type: 3}
       propertyPath: m_SortingLayerID
-      value: 0
+      value: -817980083
       objectReference: {fileID: 0}
     - target: {fileID: 8533608972783356104, guid: 3c28749c6693edc499c3c578c7eb415c,
         type: 3}
       propertyPath: m_SortingLayer
-      value: 0
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 8533608973483852750, guid: 3c28749c6693edc499c3c578c7eb415c,
         type: 3}
@@ -1204,7 +1214,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1204614569}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -7.39, y: -1.66, z: 0}
+  m_LocalPosition: {x: -3.67, y: -1.62, z: 0}
   m_LocalScale: {x: 0.186912, y: 0.186912, z: 0.186912}
   m_Children: []
   m_Father: {fileID: 0}
@@ -1283,7 +1293,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1259920834}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -5.39, y: 2.85, z: 0}
+  m_LocalPosition: {x: -7, y: 3.19, z: 0}
   m_LocalScale: {x: 0.186912, y: 0.186912, z: 0.186912}
   m_Children: []
   m_Father: {fileID: 0}
@@ -1468,7 +1478,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1590339787}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 3.97, y: 1.47, z: 0}
+  m_LocalPosition: {x: 2.85, y: 1.35, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -2412,7 +2422,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 6523115613629922938}
   m_LocalRotation: {x: 0, y: 0, z: 0.7071068, w: 0.7071068}
-  m_LocalPosition: {x: -5.438987, y: 0.87009025, z: 0}
+  m_LocalPosition: {x: -6.98, y: 0.87, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 1731395973}
