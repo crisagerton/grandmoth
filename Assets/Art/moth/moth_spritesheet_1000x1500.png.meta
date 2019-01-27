@@ -1,0 +1,393 @@
+fileFormatVersion: 2
+guid: e297a09ff6d19b8498e1ba914ff5a07e
+TextureImporter:
+  fileIDToRecycleName:
+    21300000: moth_spritesheet_1000x1500_0
+    21300002: moth_spritesheet_1000x1500_1
+    21300004: moth_spritesheet_1000x1500_2
+    21300006: moth_spritesheet_1000x1500_3
+    21300008: moth_spritesheet_1000x1500_4
+    21300010: moth_spritesheet_1000x1500_5
+    21300012: moth_spritesheet_1000x1500_6
+    21300014: moth_spritesheet_1000x1500_7
+    21300016: moth_spritesheet_1000x1500_8
+    21300018: moth_spritesheet_1000x1500_9
+    21300020: moth_spritesheet_1000x1500_10
+    21300022: moth_spritesheet_1000x1500_11
+    21300024: moth_spritesheet_1000x1500_12
+    21300026: moth_spritesheet_1000x1500_13
+  externalObjects: {}
+  serializedVersion: 7
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 0
+    aniso: -1
+    mipBias: -100
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  platformSettings:
+  - serializedVersion: 2
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+  - serializedVersion: 2
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: moth_spritesheet_1000x1500_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 2
+        width: 1000
+        height: 1500
+      alignment: 9
+      pivot: {x: 0.6447998, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 15d71de25814dd4458a94b628fab7a8c
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: moth_spritesheet_1000x1500_1
+      rect:
+        serializedVersion: 2
+        x: 1000
+        y: 2
+        width: 1000
+        height: 1500
+      alignment: 9
+      pivot: {x: 0.6447998, y: 0.43}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9aa653a33484c0948b9d016fd40876d3
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: moth_spritesheet_1000x1500_2
+      rect:
+        serializedVersion: 2
+        x: 2000
+        y: 2
+        width: 1000
+        height: 1500
+      alignment: 9
+      pivot: {x: 0.6447998, y: 0.47}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: dc3eab7142b5bab488672d2aa3c7c341
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: moth_spritesheet_1000x1500_3
+      rect:
+        serializedVersion: 2
+        x: 3000
+        y: 2
+        width: 1000
+        height: 1500
+      alignment: 9
+      pivot: {x: 0.6447998, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cf8e68ca080be5d439b25848b0b222a8
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: moth_spritesheet_1000x1500_4
+      rect:
+        serializedVersion: 2
+        x: 4000
+        y: 2
+        width: 1000
+        height: 1500
+      alignment: 9
+      pivot: {x: 0.6447998, y: 0.53}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e5e154f8b00bc92478e007d9bf025535
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: moth_spritesheet_1000x1500_5
+      rect:
+        serializedVersion: 2
+        x: 4990
+        y: 2
+        width: 1000
+        height: 1500
+      alignment: 9
+      pivot: {x: 0.6447998, y: 0.57}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7785812d3e2bfa74ba7385e7e5c841b7
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: moth_spritesheet_1000x1500_6
+      rect:
+        serializedVersion: 2
+        x: 6010
+        y: 2
+        width: 1000
+        height: 1500
+      alignment: 9
+      pivot: {x: 0.6447998, y: 0.6}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0115a60acd231244ead629ab35954a3c
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: moth_spritesheet_1000x1500_7
+      rect:
+        serializedVersion: 2
+        x: 7010
+        y: 2
+        width: 1000
+        height: 1500
+      alignment: 9
+      pivot: {x: 0.6447998, y: 0.57}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cf203950313ce9645854fc076485377d
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: moth_spritesheet_1000x1500_8
+      rect:
+        serializedVersion: 2
+        x: 8000
+        y: 2
+        width: 1000
+        height: 1500
+      alignment: 9
+      pivot: {x: 0.6447998, y: 0.53}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 368e10d5dcfc3ab409984c6c87c6cb5c
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: moth_spritesheet_1000x1500_9
+      rect:
+        serializedVersion: 2
+        x: 9000
+        y: 2
+        width: 1000
+        height: 1500
+      alignment: 9
+      pivot: {x: 0.6447998, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 699153fc93d6d8a4783eb06da42bf89c
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: moth_spritesheet_1000x1500_10
+      rect:
+        serializedVersion: 2
+        x: 10000
+        y: 2
+        width: 1000
+        height: 1500
+      alignment: 9
+      pivot: {x: 0.6447998, y: 0.47}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 16504d0cf77f67744953ea5742d62316
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: moth_spritesheet_1000x1500_11
+      rect:
+        serializedVersion: 2
+        x: 11000
+        y: 2
+        width: 1000
+        height: 1500
+      alignment: 9
+      pivot: {x: 0.6447998, y: 0.43}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 262eb61b06f89be44b90f04653bad177
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: moth_spritesheet_1000x1500_12
+      rect:
+        serializedVersion: 2
+        x: 12000
+        y: 2
+        width: 1000
+        height: 1500
+      alignment: 9
+      pivot: {x: 0.6447998, y: 0.4}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6e09f1d9e0613ba4c85210a7eef272d2
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: moth_spritesheet_1000x1500_13
+      rect:
+        serializedVersion: 2
+        x: 13000
+        y: 2
+        width: 1000
+        height: 1500
+      alignment: 9
+      pivot: {x: 0.6447998, y: 0.43}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 21aee68317659b74c99dfc8aa8d54bce
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 87b524e190bb42445b1b8784af445897
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+  spritePackingTag: 
+  pSDRemoveMatte: 0
+  pSDShowRemoveMatteOption: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
