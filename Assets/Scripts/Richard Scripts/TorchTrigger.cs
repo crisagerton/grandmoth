@@ -27,6 +27,8 @@ public class TorchTrigger : Interactable
 
             if (!particles.isPlaying)
                 particles.Play();
+
+            currentState = States.Rest;
         }
         else
         {
