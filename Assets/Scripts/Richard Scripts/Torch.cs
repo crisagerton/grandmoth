@@ -21,11 +21,9 @@ public class Torch : Interactable
         sr = GetComponent<SpriteRenderer>();
     }
 
-    public override void Update()
+    public void Update()
     {
-        base.Update();
-
-        if (active)
+        if (currentState == States.Active)
         {
             lightTimer -= Time.deltaTime;
 
@@ -35,7 +33,7 @@ public class Torch : Interactable
 
                 sr.color = Color.white;
 
-                active = false;
+                currentState = States.Rest;
             }
         }
     }
@@ -47,7 +45,7 @@ public class Torch : Interactable
 
     public override void lightTriggerEffect()
     {
-        active = true;
+        currentState = States.Active;
 
         if (!glow.isActive())
             glow.startGlow();
@@ -55,5 +53,15 @@ public class Torch : Interactable
         sr.color = Color.red;
 
         lightTimer = setLightTimer;
+    }
+
+    public override void mothLeaveEffect()
+    {
+        return;
+    }
+
+    public override void lightLeaveEffect()
+    {
+        return;
     }
 }

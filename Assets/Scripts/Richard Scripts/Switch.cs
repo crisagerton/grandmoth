@@ -11,13 +11,8 @@ public class Switch : Interactable
     {
         base.Awake();
     }
-
-    public override void Update()
-    {
-        
-    }
-
-    public void OnTriggerEnter2D(Collider2D collision)
+    
+    public override void OnTriggerEnter2D(Collider2D collision)
     {
         if (mothTriggerCheck(collision))
         {
@@ -36,15 +31,25 @@ public class Switch : Interactable
 
     public override void mothTriggerEffect()
     {
-        active = true;
+        currentState = States.Active;
 
         bulb.activateBulb();
     }
 
     public override void lightTriggerEffect()
     {
-        active = true;
+        currentState = States.Active;
 
         bulb.activateBulb();
+    }
+
+    public override void mothLeaveEffect()
+    {
+        return;
+    }
+
+    public override void lightLeaveEffect()
+    {
+        return;
     }
 }

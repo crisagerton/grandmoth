@@ -2,13 +2,15 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Lamp : Interactable
+public class DoorTrigger : Interactable
 {
-    [Header("Lamp Values")]
+    [Header("Door Trigger Values")]
     public GlowAnimation glow;
+    public DoorAnimation doorAni;
 
     // TEMPORARY
     private SpriteRenderer sr;
+    
 
     public override void Awake()
     {
@@ -19,7 +21,13 @@ public class Lamp : Interactable
 
     public override void mothTriggerEffect()
     {
-        return;
+        currentState = States.Active;
+
+        glow.startGlow();
+
+        sr.color = Color.red;
+
+        doorAni.startMovement(currentState);
     }
 
     public override void lightTriggerEffect()
@@ -29,15 +37,21 @@ public class Lamp : Interactable
         glow.startGlow();
 
         sr.color = Color.red;
+
+        doorAni.startMovement(currentState);
     }
 
     public override void mothLeaveEffect()
     {
-        return;
+        currentState = States.Deactivate;
+
+        doorAni.startMovement(currentState);
     }
 
     public override void lightLeaveEffect()
     {
-        return;
+        currentState = States.Deactivate;
+
+        doorAni.startMovement(currentState);
     }
 }

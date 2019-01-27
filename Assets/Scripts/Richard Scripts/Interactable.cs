@@ -4,11 +4,18 @@ using UnityEngine;
 
 public abstract class Interactable : MonoBehaviour
 {
+    public enum States
+    {
+        Active,
+        Deactivate,
+        Rest
+    }
+
     [Header("Characters Interactable With")]
     public bool mothInteractable = false;
     public bool lightInteractable = false;
 
-    protected bool active = false;
+    protected States currentState = States.Rest;
 
     // Checks if specified objects are colliding
     private bool mothColliding = false;
@@ -18,43 +25,27 @@ public abstract class Interactable : MonoBehaviour
     
     public virtual void Awake()
     {
-        active = false;
         mothColliding = false;
         lightColliding = false;
         anim = GetComponent<Animator>();
     }
 
-    public virtual void Update()
-    {
-        // TEMP INPUT KEY
-        if (mothCollidingCheck() )//&& Input.GetAxisRaw("MothInteract") != 0)
-            mothTriggerEffect();
-
-        if (lightCollidingCheck() )// && Input.GetAxisRaw("LightInteract") != 0)
-            lightTriggerEffect();
-
-        if (active && anim)
-        {
-            anim.SetBool("activated", true);
-        }
-    }
-
-    public void OnTriggerStay2D(Collider2D collision)
+    public virtual void OnTriggerEnter2D(Collider2D collision)
     {
         if (mothTriggerCheck(collision))
-            mothColliding = true;
+            mothTriggerEffect();
 
         if (lightTriggerCheck(collision))
-            lightColliding = true;
+            lightTriggerEffect();
     }
 
-    public void OnTriggerExit2D(Collider2D collision)
+    public virtual void OnTriggerExit2D(Collider2D collision)
     {
         if (collision.tag == "Moth")
-            mothColliding = false;
+            mothLeaveEffect();
 
         if (collision.tag == "Light")
-            lightColliding = false;
+            lightLeaveEffect();
     }
 
     // Abstract methods for the trigger effects;
@@ -62,7 +53,13 @@ public abstract class Interactable : MonoBehaviour
 
     public abstract void lightTriggerEffect();
 
+    public abstract void mothLeaveEffect();
+
+    public abstract void lightLeaveEffect();
+
+    
     #region Colliding Condition Check
+    /*
     private bool mothCollidingCheck()
     {
         return (mothColliding && !active);
@@ -72,17 +69,18 @@ public abstract class Interactable : MonoBehaviour
     {
         return (lightColliding && !active);
     }
+    */
     #endregion Colliding Condition Check
 
     #region Trigger Condition Checks
     protected bool mothTriggerCheck(Collider2D collision)
     {
-        return (mothInteractable && !active && collision.tag == "Moth");
+        return (mothInteractable && currentState != States.Active && collision.tag == "Moth");
     }
 
     protected bool lightTriggerCheck(Collider2D collision)
     {
-        return (lightInteractable && !active && collision.tag == "Light");
+        return (lightInteractable && currentState != States.Active && collision.tag == "Light");
     }
     #endregion Trigger Condition Checks
 }
