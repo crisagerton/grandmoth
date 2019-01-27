@@ -12,6 +12,9 @@ public class MultiDoorTriggers : Interactable
     public override void lightTriggerEffect()
     {
         currentState = States.Active;
+
+        GetComponent<SpriteRenderer>().enabled = false;
+        GetComponent<ParticleSystem>().Stop();
     }
 
     public override void mothLeaveEffect()
