@@ -18,6 +18,6 @@ public class PlayerController : MonoBehaviour
     void FixedUpdate()
     {
         rb2d.MovePosition(rb2d.position + 
-            new Vector2(Input.GetAxis("DPadHorizontal1"), Input.GetAxis("DPadVertical1")) * Time.fixedDeltaTime * speed);
+            new Vector2(Input.GetAxisRaw("DPadHorizontal1"), Input.GetAxisRaw("DPadVertical1")) * Time.fixedDeltaTime * speed);
     }
 }

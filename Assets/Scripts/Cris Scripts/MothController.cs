@@ -52,7 +52,7 @@ public class MothController : MonoBehaviour
             rb2d.gravityScale = 0;
         }
 
-        rb2d.MovePosition(rb2d.position + new Vector2(Input.GetAxis("DPadHorizontal2"), Input.GetAxis("DPadVertical2")) * Time.fixedDeltaTime * currentSpeed);
+        rb2d.MovePosition(rb2d.position + new Vector2(Input.GetAxisRaw("DPadHorizontal2"), Input.GetAxisRaw("DPadVertical2")) * Time.fixedDeltaTime * currentSpeed);
 
     }
 
