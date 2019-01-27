@@ -10,15 +10,10 @@ public class Torch : Interactable
     public GlowAnimation glow;
 
     private float lightTimer;
-
-    // TEMPORARY
-    private SpriteRenderer sr;
-
+    
     public override void Awake()
     {
         base.Awake();
-
-        sr = GetComponent<SpriteRenderer>();
     }
 
     public void Update()
@@ -30,8 +25,6 @@ public class Torch : Interactable
             if (lightTimer <= 0f)
             {
                 glow.disableGlow();
-
-                sr.color = Color.white;
 
                 currentState = States.Rest;
             }
@@ -49,8 +42,6 @@ public class Torch : Interactable
 
         if (!glow.isActive())
             glow.startGlow();
-
-        sr.color = Color.red;
 
         lightTimer = setLightTimer;
     }

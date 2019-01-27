@@ -7,14 +7,9 @@ public class Lamp : Interactable
     [Header("Lamp Values")]
     public GlowAnimation glow;
 
-    // TEMPORARY
-    private SpriteRenderer sr;
-
     public override void Awake()
     {
         base.Awake();
-
-        sr = GetComponent<SpriteRenderer>();
     }
 
     public override void mothTriggerEffect()
@@ -27,8 +22,6 @@ public class Lamp : Interactable
         currentState = States.Active;
 
         glow.startGlow();
-
-        sr.color = Color.red;
     }
 
     public override void mothLeaveEffect()

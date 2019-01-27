@@ -13,14 +13,6 @@ public class DummyTorch : MonoBehaviour
     private float lightTimer;
     private Interactable.States currentState = Interactable.States.Active;
 
-    // TEMPORARY
-    private SpriteRenderer sr;
-
-    public void Awake()
-    {
-        sr = GetComponent<SpriteRenderer>();
-    }
-
     public void Update()
     {
         if (currentState == Interactable.States.Active)
@@ -30,8 +22,6 @@ public class DummyTorch : MonoBehaviour
             if (lightTimer <= 0f)
             {
                 glow.disableGlow();
-
-                sr.color = Color.white;
 
                 currentState = Interactable.States.Rest;
                 torchTrigger.enableRest();
@@ -45,8 +35,6 @@ public class DummyTorch : MonoBehaviour
 
         if (!glow.isActive())
             glow.startGlow();
-
-        sr.color = Color.red;
 
         lightTimer = setLightTimer;
     }

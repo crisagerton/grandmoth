@@ -8,15 +8,9 @@ public class SideDoorTrigger : Interactable
     public GlowAnimation glow;
     public SideDoorAnimation sideDoorAni;
 
-    // TEMPORARY
-    private SpriteRenderer sr;
-
-
     public override void Awake()
     {
         base.Awake();
-
-        sr = GetComponent<SpriteRenderer>();
     }
 
     public override void mothTriggerEffect()
@@ -25,8 +19,6 @@ public class SideDoorTrigger : Interactable
 
         if (glow != null)
             glow.startGlow();
-
-        sr.color = Color.red;
 
         sideDoorAni.startMovement(currentState);
     }
@@ -37,8 +29,6 @@ public class SideDoorTrigger : Interactable
 
         if (glow != null)
             glow.startGlow();
-
-        sr.color = Color.red;
 
         sideDoorAni.startMovement(currentState);
     }

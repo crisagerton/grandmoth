@@ -14,7 +14,7 @@ public class SideDoorAnimation : MonoBehaviour
 
     public SideDoorTrigger sdTrigger;
 
-    public SimDoorTrigger[] simDTriggers;
+    public GameObject[] simDTriggers;
 
     Interactable.States currentState = Interactable.States.Rest;
 
@@ -41,8 +41,11 @@ public class SideDoorAnimation : MonoBehaviour
                 if (sdTrigger != null)
                     sdTrigger.enabled = false;
 
-                foreach (SimDoorTrigger simDTrigger in simDTriggers)
-                    simDTrigger.enabled = false;
+                foreach (GameObject simDTrigger in simDTriggers)
+                {
+                    simDTrigger.GetComponent<SpriteRenderer>().enabled = false;
+                    simDTrigger.GetComponent<ParticleSystem>().Stop();
+                }
 
                 enabled = false;
             }
