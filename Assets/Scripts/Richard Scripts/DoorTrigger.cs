@@ -6,26 +6,19 @@ public class DoorTrigger : Interactable
 {
     [Header("Door Trigger Values")]
     public GlowAnimation glow;
-    public DoorAnimation doorAni;
-
-    // TEMPORARY
-    private SpriteRenderer sr;
-    
+    public DoorAnimation doorAni;    
 
     public override void Awake()
     {
         base.Awake();
-
-        sr = GetComponent<SpriteRenderer>();
     }
 
     public override void mothTriggerEffect()
     {
         currentState = States.Active;
 
-        glow.startGlow();
-
-        sr.color = Color.red;
+        if (glow != null)
+            glow.startGlow();
 
         doorAni.startMovement(currentState);
     }
@@ -34,10 +27,9 @@ public class DoorTrigger : Interactable
     {
         currentState = States.Active;
 
-        glow.startGlow();
-
-        sr.color = Color.red;
-
+        if (glow != null)
+            glow.startGlow();
+        
         doorAni.startMovement(currentState);
     }
 

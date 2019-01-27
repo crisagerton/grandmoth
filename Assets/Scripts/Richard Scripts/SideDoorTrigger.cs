@@ -23,7 +23,8 @@ public class SideDoorTrigger : Interactable
     {
         currentState = States.Active;
 
-        glow.startGlow();
+        if (glow != null)
+            glow.startGlow();
 
         sr.color = Color.red;
 
@@ -34,7 +35,8 @@ public class SideDoorTrigger : Interactable
     {
         currentState = States.Active;
 
-        glow.startGlow();
+        if (glow != null)
+            glow.startGlow();
 
         sr.color = Color.red;
 

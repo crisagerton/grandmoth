@@ -416,6 +416,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   distanceMoved: -3
   moveDuration: 3
+  dTrigger: {fileID: 0}
+  simDTriggers: []
 --- !u!1 &9072654343570537810
 GameObject:
   m_ObjectHideFlags: 0
@@ -559,3 +561,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   distanceMoved: 3
   moveDuration: 3
+  dTrigger: {fileID: 0}
+  simDTriggers:
+  - {fileID: 9072654341991753872}
+  - {fileID: 9072654341853889715}

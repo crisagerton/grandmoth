@@ -144,6 +144,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   distanceMoved: 3
   moveDuration: 3
+  sdTrigger: {fileID: 4123697990867984061}
 --- !u!1 &4123697990792788753
 GameObject:
   m_ObjectHideFlags: 0

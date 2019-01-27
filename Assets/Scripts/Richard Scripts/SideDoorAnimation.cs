@@ -14,6 +14,8 @@ public class SideDoorAnimation : MonoBehaviour
 
     public SideDoorTrigger sdTrigger;
 
+    public SimDoorTrigger[] simDTriggers;
+
     Interactable.States currentState = Interactable.States.Rest;
 
     private float startTime;
@@ -35,11 +37,14 @@ public class SideDoorAnimation : MonoBehaviour
             if (t > 1)
             {
                 currentState = Interactable.States.Rest;
+
                 if (sdTrigger != null)
-                {
                     sdTrigger.enabled = false;
-                    enabled = false;
-                }
+
+                foreach (SimDoorTrigger simDTrigger in simDTriggers)
+                    simDTrigger.enabled = false;
+
+                enabled = false;
             }
             else
                 transform.position = new Vector3(Mathf.SmoothStep(currentXPosition, newXPosition, t), transform.position.y, 0);

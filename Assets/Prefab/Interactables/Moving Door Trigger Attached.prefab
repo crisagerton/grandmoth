@@ -302,6 +302,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   distanceMoved: 4
   moveDuration: 3
+  dTrigger: {fileID: 6989868726435697480}
 --- !u!1 &6989868726435697484
 GameObject:
   m_ObjectHideFlags: 0

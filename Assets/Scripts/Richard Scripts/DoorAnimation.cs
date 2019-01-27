@@ -13,6 +13,8 @@ public class DoorAnimation : MonoBehaviour
     private float newYPosition;
     public DoorTrigger dTrigger;
 
+    public SimDoorTrigger[] simDTriggers;
+
     Interactable.States currentState = Interactable.States.Rest;
 
     private float startTime;
@@ -34,7 +36,13 @@ public class DoorAnimation : MonoBehaviour
             if (t > 1)
             {
                 currentState = Interactable.States.Rest;
-                dTrigger.enabled = false;
+
+                if (dTrigger != null)
+                    dTrigger.enabled = false;
+
+                foreach (SimDoorTrigger simDTrigger in simDTriggers)
+                    simDTrigger.enabled = false;
+
                 enabled = false;
             }
             else

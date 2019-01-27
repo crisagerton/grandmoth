@@ -144,6 +144,7 @@ MonoBehaviour:
   distanceMoved: 3
   moveDuration: 3
   sdTrigger: {fileID: 0}
+  simDTriggers: []
 --- !u!1 &3029571686001155973
 GameObject:
   m_ObjectHideFlags: 0
@@ -288,6 +289,9 @@ MonoBehaviour:
   distanceMoved: 3
   moveDuration: 3
   sdTrigger: {fileID: 0}
+  simDTriggers:
+  - {fileID: 3029571686444585196}
+  - {fileID: 3029571686539080967}
 --- !u!1 &3029571686444585198
 GameObject:
   m_ObjectHideFlags: 0
