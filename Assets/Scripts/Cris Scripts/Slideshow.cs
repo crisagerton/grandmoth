@@ -41,7 +41,7 @@ public class Slideshow : MonoBehaviour
             Fade();
 
         timer += Time.deltaTime;
-        Debug.Log(timings[currentTimingIndex] + " " + timer);
+        Debug.Log(currentTimingIndex + " " + timer);
         if (timer >= timings[currentTimingIndex])
         {
             if (fading)

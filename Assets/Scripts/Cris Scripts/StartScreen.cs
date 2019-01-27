@@ -8,6 +8,7 @@ public class StartScreen : MonoBehaviour
     ///meaning mainly the "Di Ve" is fully shown
 
     public GameObject D;
+    public GameObject Dswitch;
     public GameObject Iswitch;
     public GameObject gameStart;
 
@@ -23,6 +24,12 @@ public class StartScreen : MonoBehaviour
     void Update()
     {
         Vector3 Dpos = new Vector3(-3.38f, 1.15f, 0); //this is the end of the D animation, so we know it's up
+
+        if (!Iswitch.active)
+        {
+            Dswitch.active = false;
+        }
+
         if (!ready)
         {
             ready = (D.transform.position == Dpos) && !Iswitch.active;
