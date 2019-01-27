@@ -69,11 +69,11 @@ public class Slideshow : MonoBehaviour
             }
             else
             {
-                //StartCoroutine(FadeWait(timings[currentTimingIndex]));
-                currentTimingIndex++;
-                currentBackgroundIndex++;
-                timer = 0;
-                fading = true;
+                StartCoroutine(FadeWait(timings[currentTimingIndex]));
+                //currentTimingIndex++;
+                //currentBackgroundIndex++;
+                //timer = 0;
+                //fading = true;
             }
         }
     }
