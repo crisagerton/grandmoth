@@ -277,10 +277,10 @@ MonoBehaviour:
   transImage: {fileID: 225791916}
   backgrounds:
   - {fileID: 21300000, guid: ddc63ed881396cd4dba166b5b8300034, type: 3}
-  - {fileID: 21300000, guid: cf855c32e1103234591893c35fc672a1, type: 3}
-  - {fileID: 21300000, guid: cf855c32e1103234591893c35fc672a1, type: 3}
-  - {fileID: 21300000, guid: d51105f371abe1b4cb907219680ccefd, type: 3}
-  - {fileID: 21300000, guid: d51105f371abe1b4cb907219680ccefd, type: 3}
+  - {fileID: 21300000, guid: 6064c9d7f1694cf47ba6092f99abf1e3, type: 3}
+  - {fileID: 21300000, guid: 6064c9d7f1694cf47ba6092f99abf1e3, type: 3}
+  - {fileID: 21300000, guid: c087c723ffb083644b2bd8b7809767bc, type: 3}
+  - {fileID: 21300000, guid: c087c723ffb083644b2bd8b7809767bc, type: 3}
   - {fileID: 21300000, guid: 11ae45d253ce60242ab0283dde28603d, type: 3}
   - {fileID: 21300000, guid: 11ae45d253ce60242ab0283dde28603d, type: 3}
   timings: 030000000300000003000000030000000300000003000000030000000300000003000000030000000300000003000000
