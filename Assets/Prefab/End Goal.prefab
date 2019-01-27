@@ -237,7 +237,10 @@ MonoBehaviour:
   sprites:
   - {fileID: 981943933}
   - {fileID: 1950507337}
-  duration: 3
+  gmAudio: {fileID: 0}
+  randomizer: {fileID: 0}
+  clip: {fileID: 0}
+  duration: 15
 --- !u!198 &4914268262077590868
 ParticleSystem:
   m_ObjectHideFlags: 0
