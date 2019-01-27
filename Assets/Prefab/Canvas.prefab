@@ -848,7 +848,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   selectedObject: {fileID: 5501054275589647457}
-  horizontalControlled: 0
+  horizontalControlled: 1
   verticalControlled: 1
 --- !u!114 &287985974560948440
 MonoBehaviour:

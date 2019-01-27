@@ -7,12 +7,14 @@ using Cinemachine;
 
 public class EndGoal : MonoBehaviour
 {
-    private Fader fade;
-    private List<GameObject> players = new List<GameObject>();
     public CinemachineVirtualCamera cm;
+    public GameObject levelObjects;
 
     public float duration = 3f;
 
+    private List<GameObject> players = new List<GameObject>();
+    private Fader fade;
+    private ParticleSystem particles;
     private float startTime;
     private float maxOthSize = 5.35f;
     private float startOthSize = 3f;
@@ -23,6 +25,7 @@ public class EndGoal : MonoBehaviour
     void Awake()
     {
         fade = GameObject.Find("GameManager").GetComponent<Fader>();
+        particles = GetComponent<ParticleSystem>();
 
         active = false;
         activeTimer = false;
@@ -91,8 +94,11 @@ public class EndGoal : MonoBehaviour
         yield return new WaitForSecondsRealtime(fadeTime);
 
         fadeTime = fade.SlowDownFade(-1);
+        levelObjects.SetActive(false);
+        particles.Stop();
+        particles.Clear();
 
-        yield return new WaitForSecondsRealtime(fadeTime - 0.5f);
+        yield return new WaitForSecondsRealtime(fadeTime - 0.8f);
 
         cm.Follow = null;
         cm.LookAt = null;
@@ -100,10 +106,9 @@ public class EndGoal : MonoBehaviour
         startTime = Time.unscaledTime;
         activeTimer = true;
 
-        while (activeTimer)
-        {
-            break;
-        }
+        yield return new WaitForSecondsRealtime(duration + 2f);
+
+        LoadNextLevel();
 
     }
 }
