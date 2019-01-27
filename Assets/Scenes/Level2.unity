@@ -726,8 +726,8 @@ Transform:
   - {fileID: 244744118}
   - {fileID: 1990791}
   - {fileID: 1087493382}
-  - {fileID: 1554780087}
   - {fileID: 864482307}
+  - {fileID: 1554780087}
   m_Father: {fileID: 0}
   m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -2238,6 +2238,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Pivot.y
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5501054276615409251, guid: aeed0b6c87db1d74f8c501fafa00e3d9,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_IntArgument
+      value: 2
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: aeed0b6c87db1d74f8c501fafa00e3d9, type: 3}
