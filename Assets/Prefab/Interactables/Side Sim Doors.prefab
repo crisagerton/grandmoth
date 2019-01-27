@@ -143,6 +143,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   distanceMoved: 3
   moveDuration: 3
+  sdTrigger: {fileID: 0}
 --- !u!1 &3029571686001155973
 GameObject:
   m_ObjectHideFlags: 0
@@ -286,6 +287,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   distanceMoved: 3
   moveDuration: 3
+  sdTrigger: {fileID: 0}
 --- !u!1 &3029571686444585198
 GameObject:
   m_ObjectHideFlags: 0
@@ -313,7 +315,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3029571686444585198}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 1.5, y: 1, z: 0}
+  m_LocalPosition: {x: -1.54, y: -3.04, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 3029571687268477209}
@@ -377,7 +379,7 @@ CircleCollider2D:
   m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
@@ -395,8 +397,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0d76c9c5ef3166c459fd7e7802fc6903, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  mothInteractable: 0
-  lightInteractable: 1
+  mothInteractable: 1
+  lightInteractable: 0
 --- !u!1 &3029571686539080961
 GameObject:
   m_ObjectHideFlags: 0
@@ -424,7 +426,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3029571686539080961}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -1.5, y: 1, z: 0}
+  m_LocalPosition: {x: -4.38, y: -3.11, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 3029571687268477209}
@@ -488,7 +490,7 @@ CircleCollider2D:
   m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
