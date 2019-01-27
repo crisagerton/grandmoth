@@ -35,7 +35,7 @@ public class DoorAnimation : MonoBehaviour
                 currentState = Interactable.States.Rest;
             }
             else
-                transform.position = new Vector3(transform.position.x, Mathf.SmoothStep(currentYPosition, newYPosition, t), 0);
+                transform.localPosition = new Vector3(transform.position.x, Mathf.SmoothStep(currentYPosition, newYPosition, t), 0);
         }
         else if (currentState == Interactable.States.Deactivate)
         {
@@ -44,7 +44,7 @@ public class DoorAnimation : MonoBehaviour
             if (t > 1)
                 currentState = Interactable.States.Rest;
             else
-                transform.position = new Vector3(transform.position.x, Mathf.SmoothStep(currentYPosition, startYPosition, t), 0);
+                transform.localPosition = new Vector3(transform.position.x, Mathf.SmoothStep(currentYPosition, startYPosition, t), 0);
         }
         else
         {
