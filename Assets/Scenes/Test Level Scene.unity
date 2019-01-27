@@ -240,6 +240,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   fadeOutTexture: {fileID: 2800000, guid: 11ae45d253ce60242ab0283dde28603d, type: 3}
   sceneFadeSpeed: 0.8
+  sceneSlowFadeSpeed: 0
   audioFadeSpeed: 0.5
 --- !u!4 &18784267
 Transform:
