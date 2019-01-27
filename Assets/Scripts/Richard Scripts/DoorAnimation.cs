@@ -11,6 +11,7 @@ public class DoorAnimation : MonoBehaviour
     private float startYPosition;
     private float currentYPosition;
     private float newYPosition;
+    public DoorTrigger dTrigger;
 
     Interactable.States currentState = Interactable.States.Rest;
 
@@ -33,6 +34,8 @@ public class DoorAnimation : MonoBehaviour
             if (t > 1)
             {
                 currentState = Interactable.States.Rest;
+                dTrigger.enabled = false;
+                enabled = false;
             }
             else
                 transform.position = new Vector3(transform.position.x, Mathf.SmoothStep(currentYPosition, newYPosition, t), 0);

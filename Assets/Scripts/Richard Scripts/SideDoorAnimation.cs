@@ -12,6 +12,8 @@ public class SideDoorAnimation : MonoBehaviour
     private float currentXPosition;
     private float newXPosition;
 
+    public SideDoorTrigger sdTrigger;
+
     Interactable.States currentState = Interactable.States.Rest;
 
     private float startTime;
@@ -33,6 +35,8 @@ public class SideDoorAnimation : MonoBehaviour
             if (t > 1)
             {
                 currentState = Interactable.States.Rest;
+                sdTrigger.enabled = false;
+                enabled = false;
             }
             else
                 transform.position = new Vector3(Mathf.SmoothStep(currentXPosition, newXPosition, t), transform.position.y, 0);
@@ -59,5 +63,13 @@ public class SideDoorAnimation : MonoBehaviour
         currentXPosition = transform.position.x;
 
         startTime = Time.time;
+    }
+
+    void OnCollisionEnter2D(Collision2D col)
+    {
+        if (col.gameObject.tag == "MovingDoor")
+        {
+            startMovement(Interactable.States.Deactivate);
+        }
     }
 }

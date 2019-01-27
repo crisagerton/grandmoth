@@ -52,4 +52,5 @@ public class Switch : Interactable
     {
         return;
     }
+
 }
