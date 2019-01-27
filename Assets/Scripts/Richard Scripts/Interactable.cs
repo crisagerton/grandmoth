@@ -27,10 +27,10 @@ public abstract class Interactable : MonoBehaviour
     public virtual void Update()
     {
         // TEMP INPUT KEY
-        if (mothCollidingCheck() && Input.GetAxisRaw("MothInteract") != 0)
+        if (mothCollidingCheck() )//&& Input.GetAxisRaw("MothInteract") != 0)
             mothTriggerEffect();
 
-        if (lightCollidingCheck() && Input.GetAxisRaw("LightInteract") != 0)
+        if (lightCollidingCheck() )// && Input.GetAxisRaw("LightInteract") != 0)
             lightTriggerEffect();
 
         if (active && anim)

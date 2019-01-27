@@ -10,7 +10,7 @@ public class Wick : Interactable
     // TEMPORARY
     private SpriteRenderer sr;
 
-    private CandleAnimation candleAni;
+    public CandleAnimation candleAni;
 
     public override void Awake()
     {
@@ -18,7 +18,7 @@ public class Wick : Interactable
 
         sr = GetComponent<SpriteRenderer>();
 
-        candleAni = transform.parent.GetComponent<CandleAnimation>();
+       // candleAni = transform.parent.GetComponent<CandleAnimation>();
     }
 
     public override void Update()
@@ -28,7 +28,13 @@ public class Wick : Interactable
 
     public override void mothTriggerEffect()
     {
-        return;
+        active = true;
+
+        glow.startGlow();
+
+        sr.color = Color.red;
+
+        candleAni.startMovement();
     }
 
     public override void lightTriggerEffect()

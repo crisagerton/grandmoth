@@ -11,6 +11,7 @@ public class CandleAnimation : MonoBehaviour
     private float startYPosition;
     private float newYPosition;
     private bool active = false;
+    private bool closeDoor = false;
     private float startTime;
     
     void Awake()
@@ -28,15 +29,34 @@ public class CandleAnimation : MonoBehaviour
             float t = (Time.time - startTime) / moveDuration;
 
             if (t > 1)
+            {
                 active = false;
+            }
             else
                 transform.position = new Vector3(transform.position.x, Mathf.SmoothStep(startYPosition, newYPosition, t), 0);
+        }
+        else if(closeDoor)
+        {
+            float t = (Time.time - startTime) / moveDuration;
+
+            if (t > 1)
+                closeDoor = false;
+            else
+                transform.position = new Vector3(transform.position.x, Mathf.SmoothStep(newYPosition, startYPosition, t), 0);
         }
     }
 
     public void startMovement()
     {
         active = true;
+
+        startTime = Time.time;
+    }
+
+    public void returnMovement()
+    {
+        active = false;
+        closeDoor = true;
 
         startTime = Time.time;
     }
