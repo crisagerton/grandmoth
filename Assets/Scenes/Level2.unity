@@ -793,7 +793,7 @@ Transform:
   m_GameObject: {fileID: 923239170}
   m_LocalRotation: {x: 0.000000011920929, y: 0.0000003695488, z: -0.000000003813419,
     w: 1}
-  m_LocalPosition: {x: -4.731224, y: -0.4382106, z: -10.123047}
+  m_LocalPosition: {x: -4.737973, y: -0.4382099, z: -10.123047}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 947567382}
@@ -2402,6 +2402,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Moth
       objectReference: {fileID: 0}
+    - target: {fileID: 4674300128195810739, guid: ef7e275c34dd4ec4ba68be1c3a128b4b,
+        type: 3}
+      propertyPath: m_TagString
+      value: Moth
+      objectReference: {fileID: 0}
     - target: {fileID: 3720175330524578069, guid: ef7e275c34dd4ec4ba68be1c3a128b4b,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -2493,11 +2498,6 @@ PrefabInstance:
       propertyPath: halo
       value: 
       objectReference: {fileID: 370770675}
-    - target: {fileID: 4674300128195810739, guid: ef7e275c34dd4ec4ba68be1c3a128b4b,
-        type: 3}
-      propertyPath: m_TagString
-      value: Moth
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: ef7e275c34dd4ec4ba68be1c3a128b4b, type: 3}
 --- !u!1 &1896628031
@@ -2619,6 +2619,46 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1713604109322469470, guid: 5e56dbea129f79941bc7f49669f2b2d7,
+        type: 3}
+      propertyPath: m_audioClip
+      value: 
+      objectReference: {fileID: 8300000, guid: 5b428a267f8653b4281b890096c79091, type: 3}
+    - target: {fileID: 1713604109115212385, guid: 5e56dbea129f79941bc7f49669f2b2d7,
+        type: 3}
+      propertyPath: ambientAudioClips.Array.size
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 1713604109115212385, guid: 5e56dbea129f79941bc7f49669f2b2d7,
+        type: 3}
+      propertyPath: ambientAudioClips.Array.data[1]
+      value: 
+      objectReference: {fileID: 8300000, guid: 7511cfa887a1506429e8ebc1347c7f36, type: 3}
+    - target: {fileID: 1713604109115212385, guid: 5e56dbea129f79941bc7f49669f2b2d7,
+        type: 3}
+      propertyPath: ambientAudioClips.Array.data[2]
+      value: 
+      objectReference: {fileID: 8300000, guid: cd995a64e7f4a0042ae7e163de075e33, type: 3}
+    - target: {fileID: 1713604109115212385, guid: 5e56dbea129f79941bc7f49669f2b2d7,
+        type: 3}
+      propertyPath: ambientAudioClips.Array.data[3]
+      value: 
+      objectReference: {fileID: 8300000, guid: ea2c8f82d7328c44eb6ae1207c9a8a31, type: 3}
+    - target: {fileID: 1713604109115212385, guid: 5e56dbea129f79941bc7f49669f2b2d7,
+        type: 3}
+      propertyPath: ambientAudioClips.Array.data[0]
+      value: 
+      objectReference: {fileID: 8300000, guid: dbfbd411e3a545046a1845c18ce8af9a, type: 3}
+    - target: {fileID: 1713604109115212385, guid: 5e56dbea129f79941bc7f49669f2b2d7,
+        type: 3}
+      propertyPath: minIntervalTime
+      value: 15
+      objectReference: {fileID: 0}
+    - target: {fileID: 1713604109115212384, guid: 5e56dbea129f79941bc7f49669f2b2d7,
+        type: 3}
+      propertyPath: m_Volume
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 5e56dbea129f79941bc7f49669f2b2d7, type: 3}
