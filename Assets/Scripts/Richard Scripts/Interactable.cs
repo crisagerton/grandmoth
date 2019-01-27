@@ -38,10 +38,10 @@ public abstract class Interactable : MonoBehaviour
 
     public virtual void OnTriggerExit2D(Collider2D collision)
     {
-        if (collision.tag == "Moth")
+        if (collision.tag == "Moth" && mothInteractable)
             mothLeaveEffect();
 
-        if (collision.tag == "Light")
+        if (collision.tag == "Light" && lightInteractable)
             lightLeaveEffect();
     }
 
