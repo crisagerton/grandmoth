@@ -276,26 +276,48 @@ MonoBehaviour:
   sceneImage: {fileID: 326933735}
   transImage: {fileID: 225791916}
   backgrounds:
+  - {fileID: 21300000, guid: 5a332430f9d67eb47843723cc8b210ec, type: 3}
+  - {fileID: 21300000, guid: 11ae45d253ce60242ab0283dde28603d, type: 3}
+  - {fileID: 21300000, guid: 11ae45d253ce60242ab0283dde28603d, type: 3}
+  - {fileID: 21300000, guid: ddc63ed881396cd4dba166b5b8300034, type: 3}
   - {fileID: 21300000, guid: ddc63ed881396cd4dba166b5b8300034, type: 3}
   - {fileID: 21300000, guid: 6064c9d7f1694cf47ba6092f99abf1e3, type: 3}
   - {fileID: 21300000, guid: 6064c9d7f1694cf47ba6092f99abf1e3, type: 3}
+  - {fileID: 21300000, guid: 6064c9d7f1694cf47ba6092f99abf1e3, type: 3}
   - {fileID: 21300000, guid: c087c723ffb083644b2bd8b7809767bc, type: 3}
   - {fileID: 21300000, guid: c087c723ffb083644b2bd8b7809767bc, type: 3}
-  - {fileID: 21300000, guid: c087c723ffb083644b2bd8b7809767bc, type: 3}
-  - {fileID: 21300000, guid: cf855c32e1103234591893c35fc672a1, type: 3}
-  - {fileID: 21300000, guid: cf855c32e1103234591893c35fc672a1, type: 3}
-  - {fileID: 21300000, guid: 5a332430f9d67eb47843723cc8b210ec, type: 3}
-  - {fileID: 21300000, guid: 5a332430f9d67eb47843723cc8b210ec, type: 3}
-  - {fileID: 21300000, guid: d51105f371abe1b4cb907219680ccefd, type: 3}
-  - {fileID: 21300000, guid: d51105f371abe1b4cb907219680ccefd, type: 3}
+  - {fileID: 21300000, guid: d6ba486a979dd634d8bb10c211994272, type: 3}
+  - {fileID: 21300000, guid: d6ba486a979dd634d8bb10c211994272, type: 3}
+  - {fileID: 21300000, guid: 63c793260877dfa499ee74095c8ed249, type: 3}
+  - {fileID: 21300000, guid: 63c793260877dfa499ee74095c8ed249, type: 3}
+  - {fileID: 21300000, guid: 90e4a51e86dfdaf429ed18f0f74931c1, type: 3}
+  - {fileID: 21300000, guid: 90e4a51e86dfdaf429ed18f0f74931c1, type: 3}
   - {fileID: 21300000, guid: 11ae45d253ce60242ab0283dde28603d, type: 3}
   - {fileID: 21300000, guid: 11ae45d253ce60242ab0283dde28603d, type: 3}
   - {fileID: 21300000, guid: 11ae45d253ce60242ab0283dde28603d, type: 3}
-  - {fileID: 21300000, guid: 11ae45d253ce60242ab0283dde28603d, type: 3}
-  - {fileID: 21300000, guid: 11ae45d253ce60242ab0283dde28603d, type: 3}
-  - {fileID: 21300000, guid: 11ae45d253ce60242ab0283dde28603d, type: 3}
-  - {fileID: 21300000, guid: 11ae45d253ce60242ab0283dde28603d, type: 3}
-  timings: 050000000500000003000000030000000500000003000000030000000300000003000000030000000300000003000000
+  timings:
+  - 3
+  - 5
+  - 0
+  - 4
+  - 3
+  - 2
+  - 3
+  - 0
+  - 3
+  - 3
+  - 3
+  - 3
+  - 3
+  - 3
+  - 3
+  - 3
+  - 3
+  - 3
+  - 3
+  - 3
+  - 3
+  - 3
 --- !u!4 &18784267
 Transform:
   m_ObjectHideFlags: 0
@@ -692,7 +714,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!95 &623536018
 Animator:
   serializedVersion: 3
