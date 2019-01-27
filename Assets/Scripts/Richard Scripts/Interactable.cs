@@ -20,14 +20,11 @@ public abstract class Interactable : MonoBehaviour
     // Checks if specified objects are colliding
     private bool mothColliding = false;
     private bool lightColliding = false;
-
-    private Animator anim;
     
     public virtual void Awake()
     {
         mothColliding = false;
         lightColliding = false;
-        anim = GetComponent<Animator>();
     }
 
     public virtual void OnTriggerEnter2D(Collider2D collision)
