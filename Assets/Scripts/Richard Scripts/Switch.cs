@@ -19,6 +19,7 @@ public class Switch : Interactable
             mothTriggerEffect();
 
             gameObject.SetActive(false);
+
         }
 
         if (lightTriggerCheck(collision))
