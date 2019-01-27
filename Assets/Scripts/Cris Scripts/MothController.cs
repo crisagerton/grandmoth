@@ -15,7 +15,7 @@ public class MothController : MonoBehaviour
     private Vector2 velocity;
     private float currentSpeed;
     private bool sleepyTime; //true if outside a light source
-    //add impulse to increase speed and stuff so they can have different accelerations
+    public List<GameObject> collidingLights;
 
     void Start()
     {
@@ -24,6 +24,7 @@ public class MothController : MonoBehaviour
         velocity = new Vector2(0, 0);
         currentSpeed = speed;
         sleepyTime = true;
+        collidingLights = new List<GameObject>();
 
         if (grandma)
             Physics2D.IgnoreCollision(grandma, GetComponent<Collider2D>());
@@ -54,35 +55,37 @@ public class MothController : MonoBehaviour
     {
         if (other.tag.Contains("Glow"))
         {
-            sleepyTime = true;
+            collidingLights.Remove(other.gameObject);
         }
+        if (collidingLights.Count == 0)
+            sleepyTime = true;
     }
 
     void OnTriggerEnter2D(Collider2D other)
     {
-        //RaycastHit2D hit = Physics2D.Raycast(transform.position, other.transform.position - transform.position,
-        //    Vector3.Distance(other.transform.position, transform.position));
-        //Debug.Log(hit.transform.tag);
-        if (other.tag.Contains("Glow"))
+        if (other.tag.Contains("Glow") && other.transform.localScale != new Vector3(0, 0, 0))
+        {
+            collidingLights.Add(other.gameObject);
             sleepyTime = false;
+        }
     }
 
     void OnTriggerStay2D(Collider2D other)
     {
-        //RaycastHit2D hit = Physics2D.Raycast(transform.position, other.transform.position);
-        //Debug.Log(hit);
-        if (other.tag.Contains("Glow"))
+        if (other.tag.Contains("Glow") && other.transform.localScale != new Vector3(0, 0, 0))
+        {
+            if (!collidingLights.Contains(other.gameObject))
+                collidingLights.Add(other.gameObject);
             sleepyTime = false;
+        }
     }
 
     void updateAnimations()
     {
         anim.SetBool("sleeping", sleepyTime);
+        halo.SetActive(sleepyTime);
         if (sleepyTime)
-        {
-            halo.SetActive(true);
-            return;
-        }
+        { return; }
 
         halo.SetActive(false);
         //Flip sprite based on where the player is moving

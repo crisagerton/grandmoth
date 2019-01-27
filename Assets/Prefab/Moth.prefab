@@ -72,7 +72,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 1
+  m_SortingOrder: 2
   m_Sprite: {fileID: 21300000, guid: e297a09ff6d19b8498e1ba914ff5a07e, type: 3}
   m_Color: {r: 0, g: 0.8467736, b: 1, a: 1}
   m_FlipX: 0
@@ -137,6 +137,7 @@ MonoBehaviour:
   halo: {fileID: 4674300128195810739}
   speed: 2
   sleepySpeed: 0.5
+  collidingLights: []
 --- !u!95 &3720175330524578065
 Animator:
   serializedVersion: 3
@@ -223,7 +224,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 1
   m_Sprite: {fileID: 21300000, guid: 30418c80123ab654faa55af4a7801974, type: 3}
   m_Color: {r: 0, g: 0.8509804, b: 0.24210444, a: 1}
   m_FlipX: 0
