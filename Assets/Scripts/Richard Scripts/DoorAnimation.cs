@@ -14,7 +14,7 @@ public class DoorAnimation : MonoBehaviour
 
     public DoorTrigger dTrigger;
 
-    public SimDoorTrigger[] simDTriggers;
+    public GameObject[] simDTriggers;
 
     Interactable.States currentState = Interactable.States.Rest;
 
@@ -41,8 +41,11 @@ public class DoorAnimation : MonoBehaviour
                 if (dTrigger != null)
                     dTrigger.enabled = false;
 
-                foreach (SimDoorTrigger simDTrigger in simDTriggers)
-                    simDTrigger.enabled = false;
+                foreach (GameObject simDTrigger in simDTriggers)
+                {
+                    simDTrigger.GetComponent<SpriteRenderer>().enabled = false;
+                    simDTrigger.GetComponent<ParticleSystem>().Stop();
+                }
 
                 enabled = false;
             }
