@@ -2,25 +2,25 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class DoorAnimation : MonoBehaviour
+public class SideDoorAnimation : MonoBehaviour
 {
     public float distanceMoved = 3f;
 
     public float moveDuration = 3f;
 
-    private float startYPosition;
-    private float currentYPosition;
-    private float newYPosition;
+    private float startXPosition;
+    private float currentXPosition;
+    private float newXPosition;
 
     Interactable.States currentState = Interactable.States.Rest;
 
     private float startTime;
-    
+
     void Awake()
     {
-        startYPosition = transform.position.y;
+        startXPosition = transform.position.x;
 
-        newYPosition = startYPosition - distanceMoved;
+        newXPosition = startXPosition - distanceMoved;
     }
 
     // Update is called once per frame
@@ -35,7 +35,7 @@ public class DoorAnimation : MonoBehaviour
                 currentState = Interactable.States.Rest;
             }
             else
-                transform.position = new Vector3(transform.position.x, Mathf.SmoothStep(currentYPosition, newYPosition, t), 0);
+                transform.position = new Vector3(Mathf.SmoothStep(currentXPosition, newXPosition, t), transform.position.y, 0);
         }
         else if (currentState == Interactable.States.Deactivate)
         {
@@ -44,7 +44,7 @@ public class DoorAnimation : MonoBehaviour
             if (t > 1)
                 currentState = Interactable.States.Rest;
             else
-                transform.position = new Vector3(transform.position.x, Mathf.SmoothStep(currentYPosition, startYPosition, t), 0);
+                transform.position = new Vector3(Mathf.SmoothStep(currentXPosition, startXPosition, t), transform.position.y, 0);
         }
         else
         {
@@ -56,7 +56,7 @@ public class DoorAnimation : MonoBehaviour
     {
         currentState = state;
 
-        currentYPosition = transform.position.y;
+        currentXPosition = transform.position.x;
 
         startTime = Time.time;
     }
