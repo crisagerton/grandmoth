@@ -19,7 +19,7 @@ public class Aura : MonoBehaviour
 
     public void OnTriggerExit2D(Collider2D collision)
     {
-        if (collision.tag == "Glow" && collision.gameObject != glow.gameObject)
-            glow.disableGlow(); 
+      /*  if (collision.tag == "Glow" && collision.gameObject != glow.gameObject)
+            glow.disableGlow(); */
     }
 }
