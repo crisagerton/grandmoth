@@ -38,16 +38,21 @@ public class DoorAnimation : MonoBehaviour
             {
                 currentState = Interactable.States.Rest;
 
+
                 if (dTrigger != null)
                     dTrigger.enabled = false;
 
                 foreach (GameObject simDTrigger in simDTriggers)
                 {
                     simDTrigger.GetComponent<SpriteRenderer>().enabled = false;
-                    simDTrigger.GetComponent<ParticleSystem>().Stop();
+
+                    if (simDTrigger.GetComponent<ParticleSystem>() != null)
+                        simDTrigger.GetComponent<ParticleSystem>().Stop();
                 }
 
                 enabled = false;
+
+
             }
             else
                 transform.position = new Vector3(transform.position.x, Mathf.SmoothStep(currentYPosition, newYPosition, t), 0);
