@@ -37,7 +37,11 @@ public class EndGoal : MonoBehaviour
         if (players.Count == 2 && !active)
         {
             active = true;
-            //LoadNextLevel();
+            if (SceneManager.GetActiveScene().buildIndex == 0)
+            {
+                LoadNextLevel();
+                return;
+            }
             PlayCutscene();
         }
 

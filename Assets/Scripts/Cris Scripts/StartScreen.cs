@@ -23,9 +23,6 @@ public class StartScreen : MonoBehaviour
     void Update()
     {
         Vector3 Dpos = new Vector3(-3.38f, 1.15f, 0); //this is the end of the D animation, so we know it's up
-
-        Debug.Log("DeDos " + (D.transform.position == Dpos));
-        Debug.Log("Swiiitch " + Iswitch.active);
         if (!ready)
         {
             ready = (D.transform.position == Dpos) && !Iswitch.active;
