@@ -1017,6 +1017,21 @@ PrefabInstance:
       propertyPath: sprites.Array.data[1]
       value: 
       objectReference: {fileID: 401019175}
+    - target: {fileID: 8965276424055559097, guid: cd9873567db39334787130a42ff815a9,
+        type: 3}
+      propertyPath: gmAudio
+      value: 
+      objectReference: {fileID: 1906540269}
+    - target: {fileID: 8965276424055559097, guid: cd9873567db39334787130a42ff815a9,
+        type: 3}
+      propertyPath: randomizer
+      value: 
+      objectReference: {fileID: 1906540268}
+    - target: {fileID: 8965276424055559097, guid: cd9873567db39334787130a42ff815a9,
+        type: 3}
+      propertyPath: clip
+      value: 
+      objectReference: {fileID: 8300000, guid: de4cb40fd7de3c44bb190424629122ae, type: 3}
     - target: {fileID: 981943933, guid: cd9873567db39334787130a42ff815a9, type: 3}
       propertyPath: m_SortingLayerID
       value: -621316781
@@ -2698,6 +2713,24 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 5e56dbea129f79941bc7f49669f2b2d7, type: 3}
+--- !u!114 &1906540268 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 1713604109115212385, guid: 5e56dbea129f79941bc7f49669f2b2d7,
+    type: 3}
+  m_PrefabInstance: {fileID: 1906540267}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4d39eacaac470f64fa5d5773232e803c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!82 &1906540269 stripped
+AudioSource:
+  m_CorrespondingSourceObject: {fileID: 1713604109322469470, guid: 5e56dbea129f79941bc7f49669f2b2d7,
+    type: 3}
+  m_PrefabInstance: {fileID: 1906540267}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1922410353
 PrefabInstance:
   m_ObjectHideFlags: 0

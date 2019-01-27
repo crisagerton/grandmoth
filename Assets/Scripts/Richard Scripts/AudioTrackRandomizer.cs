@@ -20,26 +20,32 @@ public class AudioTrackRandomizer : MonoBehaviour
 
     private AudioSource audioSource;
     private float timer;
+    private bool paused = false;
 
     public void Awake()
     {
         audioSource = GetComponent<AudioSource>();
         timer = Random.Range(minIntervalTime, maxIntervalTime);
+        paused = false;
     }
 
     // Update is called once per frame
     void Update()
     {
-        timer -= Time.deltaTime;
-
-        if (timer <= 0f)
+        if (!paused)
         {
-            audioSource.clip = ambientAudioClips[Random.Range(0, ambientAudioClips.Count - 1)];
+            timer -= Time.deltaTime;
 
-            audioSource.Play();
+            if (timer <= 0f)
+            {
+                audioSource.clip = ambientAudioClips[Random.Range(0, ambientAudioClips.Count - 1)];
 
-            timer = Random.Range(minIntervalTime, maxIntervalTime);
+                audioSource.Play();
+
+                timer = Random.Range(minIntervalTime, maxIntervalTime);
+            }
         }
+        
     }
 
     public AudioClip getMothAudioClip()
@@ -50,5 +56,11 @@ public class AudioTrackRandomizer : MonoBehaviour
     public AudioClip getLightAudioClip()
     {
         return (lightAudioClips[Random.Range(0, lightAudioClips.Count - 1)]);
+    }
+
+    public void stopTrack()
+    {
+        paused = true;
+        audioSource.Stop();
     }
 }

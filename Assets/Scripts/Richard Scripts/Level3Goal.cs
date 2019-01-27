@@ -12,6 +12,11 @@ public class Level3Goal : MonoBehaviour
 
     public float duration = 3f;
 
+    public AudioSource gmAudio;
+    public AudioTrackRandomizer randomizer;
+
+    public AudioClip clip;
+
     private List<GameObject> players = new List<GameObject>();
     private Fader fade;
     private ParticleSystem particles;
@@ -88,11 +93,17 @@ public class Level3Goal : MonoBehaviour
 
     public void PlayCutscene()
     {
-        StartCoroutine(CutSceneAnimation());
+        LoadNextLevel();
+        //StartCoroutine(CutSceneAnimation());
     }
 
     IEnumerator CutSceneAnimation()
     {
+        randomizer.stopTrack();
+
+        gmAudio.clip = clip;
+        gmAudio.Play();
+
         float fadeTime = fade.SlowDownFade(1);
 
         yield return new WaitForSecondsRealtime(fadeTime);

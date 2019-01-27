@@ -11,6 +11,11 @@ public class EndGoal : MonoBehaviour
     public GameObject levelObjects;
     public List<SpriteRenderer> sprites;
 
+    public AudioSource gmAudio;
+    public AudioTrackRandomizer randomizer;
+
+    public AudioClip clip;
+
     public float duration = 3f;
 
     private List<GameObject> players = new List<GameObject>();
@@ -22,7 +27,7 @@ public class EndGoal : MonoBehaviour
 
     private bool activeTimer = false;
     private bool active = false;
-    
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                        
     void Awake()
     {
         fade = GameObject.Find("GameManager").GetComponent<Fader>();
@@ -94,6 +99,11 @@ public class EndGoal : MonoBehaviour
 
     IEnumerator CutSceneAnimation()
     {
+        randomizer.stopTrack();
+
+        gmAudio.clip = clip;
+        gmAudio.Play();
+
         float fadeTime = fade.SlowDownFade(1);
 
         yield return new WaitForSecondsRealtime(fadeTime);
