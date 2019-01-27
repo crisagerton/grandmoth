@@ -5,6 +5,7 @@ using UnityEngine;
 public class MothController : MonoBehaviour
 {
     public Collider2D grandma; //to ignore collisions between players
+    public GameObject halo; //to turn on when the moth is napping
     public float speed;
     public float sleepySpeed; //the speed the moth falls asleep
 
@@ -77,7 +78,13 @@ public class MothController : MonoBehaviour
     void updateAnimations()
     {
         anim.SetBool("sleeping", sleepyTime);
+        if (sleepyTime)
+        {
+            halo.SetActive(true);
+            return;
+        }
 
+        halo.SetActive(false);
         //Flip sprite based on where the player is moving
         if (Input.GetAxis("DPadHorizontal2") == -1)
             GetComponent<SpriteRenderer>().flipX = true;
