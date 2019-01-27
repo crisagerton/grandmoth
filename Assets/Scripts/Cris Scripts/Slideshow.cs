@@ -9,7 +9,7 @@ public class Slideshow : MonoBehaviour
     public SpriteRenderer sceneImage;
     public SpriteRenderer transImage;
     public List<Sprite> backgrounds;
-    public List<int> timings; //List of timings, every other timing is a fade
+    public List<float> timings; //List of timings, every other timing is a fade
 
     private int currentBackgroundIndex;
     private int currentTimingIndex;
@@ -41,8 +41,8 @@ public class Slideshow : MonoBehaviour
             Fade();
 
         timer += Time.deltaTime;
-        //Debug.Log(currentTimingIndex);
-        if(timer >= timings[currentTimingIndex])
+        Debug.Log(timings[currentTimingIndex] + " " + timer);
+        if (timer >= timings[currentTimingIndex])
         {
             if (fading)
             {
@@ -64,6 +64,9 @@ public class Slideshow : MonoBehaviour
             else
             {
                 StartCoroutine(FadeWait(timings[currentTimingIndex]));
+                //currentTimingIndex++;
+                //timer = 0;
+                //fading = true;
             }
         }
     }
@@ -75,9 +78,9 @@ public class Slideshow : MonoBehaviour
         transImage.color = new Color(1, 1, 1, a);
     }
 
-    IEnumerator FadeWait(int timeWait)
+    IEnumerator FadeWait(float timeWait)
     {
-        yield return new WaitForSecondsRealtime(timeWait);
+        yield return new WaitForSeconds(timeWait);
         fading = true;
     }
 
