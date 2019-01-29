@@ -55,8 +55,8 @@ public class Slideshow : MonoBehaviour
                 Debug.Log(backgrounds[currentBackgroundIndex]);
                 if (currentBackgroundIndex + 2 <= backgrounds.Count)
                 {
-                    sceneImage.sprite = backgrounds[currentBackgroundIndex++];
-                    transImage.sprite = backgrounds[currentBackgroundIndex];
+                    sceneImage.sprite = backgrounds[currentBackgroundIndex];
+                    transImage.sprite = backgrounds[currentBackgroundIndex+1];
                 }
 
                 sceneImage.color = Color.white;
@@ -69,11 +69,11 @@ public class Slideshow : MonoBehaviour
             }
             else
             {
-                StartCoroutine(FadeWait(timings[currentTimingIndex]));
-                //currenttimingindex++;
-                //currentbackgroundindex++;
-                //timer = 0;
-                //fading = true;
+                //StartCoroutine(FadeWait(timings[currentTimingIndex]));
+                currentTimingIndex++;
+                currentBackgroundIndex++;
+                timer = 0;
+                fading = true;
             }
         }
     }
